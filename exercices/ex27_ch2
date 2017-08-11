@@ -8,7 +8,7 @@
 >>> poly_adverbs = list(wn.all_synsets("r"))
 >>> poly_adjectives = list(wn.all_synsets('a'))
 
-def calc_words(synset):
+def calc_words(synset):                               #counts number of distict groupwords
 ...     all_words = []
 ...     for syn in synset:
 ...             all_words += syn.lemma_names()
@@ -17,12 +17,12 @@ def calc_words(synset):
 ...     return total
 
 ... 
->>> def total_senses(synset):
+>>> def total_senses(synset):                         #counts number of senses for the groupwords 
 ...     senses = sum(1 for x in synset)
 ...     return senses
 ... 
 
->>> def average_polysemy(synset):
+>>> def average_polysemy(synset):                                 #find average meanings(?) 
 ...     average = total_senses(synset) / calc_words(synset)
 ...     return average
 ... 
