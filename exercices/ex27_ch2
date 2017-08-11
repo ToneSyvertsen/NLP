@@ -28,19 +28,20 @@ def calc_words(synset):                               #counts number of distict 
 ... 
 
 >>> print(total_senses(poly_nouns))
-82115                                       #different meanings of the verbs
+82115                                       #different meanings of the nouns
 >>> print(calc_words(poly_nouns))
-119034                                      #number of distinct verbs (then a lot of verbs must have the same meaning?)
->>> print(average_polysemy(poly_nouns))
-0.6898449182586488                          #I do belive this function tells us why there are more verbs than meanings, 
-                                            #if you multiply this with calc_words you get the sum in meanings 
+119034                                      #number of distinct nouns (then a lot of nouns must have the same meaning?)
+>>> print(average_polysemy(poly_nouns))     #if you multiply this with calc_words you get the sum in meanings so the function should be working
+0.6898449182586488                           
+                                            
 
->>> print(total_senses(poly_verbs))
+>>> print(total_senses(poly_verbs))        #different meanings of the verbs
 13767
->>> print(calc_words(poly_verbs))
+>>> print(calc_words(poly_verbs))          #number of distinct verbs (here there are more meanings than distinct verbs, that makes more sense to me) 
 11531
->>> print(average_polysemy(poly_verbs))
-1.19391206313416
+>>> print(average_polysemy(poly_verbs))    #Here every verb has 1,19 meanings in average 
+1.19391206313416                           
+
 
 >>> print(total_senses(poly_adverbs))
 3621
