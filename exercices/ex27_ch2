@@ -1,0 +1,59 @@
+27.
+>>> from __future__ import division
+>>> import nltk
+>>> from nltk.corpus import wordnet as wn
+
+>>> poly_nouns = list(wn.all_synsets('n'))
+>>> poly_verbs = list(wn.all_synsets('v'))
+>>> poly_adverbs = list(wn.all_synsets("r"))
+>>> poly_adjectives = list(wn.all_synsets('a'))
+
+def calc_words(synset):
+...     all_words = []
+...     for syn in synset:
+...             all_words += syn.lemma_names()
+...     # eliminates duplicates and gets the count
+...     total = len(set(all_words))
+...     return total
+
+... 
+>>> def total_senses(synset):
+...     senses = sum(1 for x in synset)
+...     return senses
+... 
+
+>>> def average_polysemy(synset):
+...     average = total_senses(synset) / calc_words(synset)
+...     return average
+... 
+
+>>> print(total_senses(poly_nouns))
+82115                                       #different meanings of the verbs
+>>> print(calc_words(poly_nouns))
+119034                                      #number of distinct verbs (then a lot of verbs must have the same meaning?)
+>>> print(average_polysemy(poly_nouns))
+0.6898449182586488                          #I do belive this function tells us why there are more verbs than meanings, 
+                                            #if you multiply this with calc_words you get the sum in meanings 
+
+>>> print(total_senses(poly_verbs))
+13767
+>>> print(calc_words(poly_verbs))
+11531
+>>> print(average_polysemy(poly_verbs))
+1.19391206313416
+
+>>> print(total_senses(poly_adverbs))
+3621
+>>> print(calc_words(poly_adverbs))
+4481
+>>> print(average_polysemy(poly_adverbs))
+0.80807855389422
+
+>>> print(total_senses(poly_adjectives))
+18156
+>>> print(calc_words(poly_adjectives))
+21538
+>>> print(average_polysemy(poly_adjectives))
+0.8429752066115702
+
+
