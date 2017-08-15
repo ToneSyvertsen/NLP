@@ -1,0 +1,240 @@
+My answers on the exercises in ch.2
+ 
+1. 	In [136]: phrase = ['to', 'be', 'or', 'not', 'to', 'be'] 
+
+	Repeating some of the things from ch.1:
+
+	In [138]: phrase + phrase
+Out[138]: ['to', 'be', 'or', 'not', 'to', 'be', 'to', 'be', 'or', 'not', 'to', 'be']
+
+	In [139]: sorted(phrase)
+Out[139]: ['be', 'be', 'not', 'or', 'to', 'to']
+
+	In [140]: phrase * 2
+Out[140]: ['to', 'be', 'or', 'not', 'to', 'be', 'to', 'be', 'or', 'not', 'to', 'be']
+
+In [152]: sorted(phrase * 2)
+Out[152]: ['be', 'be', 'be', 'be', 'not', 'not', 'or', 'or', 'to', 'to', 'to', 'to']
+	
+
+2.	In [157]: austen = nltk.Text(nltk.corpus.gutenberg.words('austen-persuasion.txt'))
+	
+In [158]: len(austen)
+Out[158]: 98171
+
+	In [159]: len(set(austen))
+Out[159]: 6132
+
+
+
+
+3.	In [160]: genre_word = [(genre, word)
+     ...: for genre in ['fiction', 'mystery']
+     ...: for word in brown.words(categories=genre)]
+
+	In [162]: genre_word[:4]
+Out[162]:
+[('fiction', 'Thirty-three'),
+ ('fiction', 'Scotty'),
+ ('fiction', 'did'),
+ ('fiction', 'not')]
+
+In [163]: genre_word[-4:]
+Out[163]: [('mystery', 'with'), ('mystery', 'me'), ('mystery', "''"), ('mystery', '.')]
+
+
+4. I had to cheet on this one, so i will start by putting in my original answere that did not work:
+
+
+In [170]: cfd = nltk.ConditionalFreqDist(
+     ...:  (target, fileid)
+     ...: for fileid in state_union
+     ...: for w in state_union(fileid)
+     ...: for target in ['men', 'women', 'people']
+     ...: if w.lower().startswith(target))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-170-1f3921cf0500> in <module>()
+      1 cfd = nltk.ConditionalFreqDist(
+      2  (target, fileid)
+----> 3 for fileid in state_union
+      4 for w in state_union(fileid)
+      5 for target in ['men', 'women', 'people']
+
+TypeError: 'PlaintextCorpusReader' object is not iterable
+
+In [172]: cfd = nltk.ConditionalFreqDist(
+     ...:   (target, fileid[:4])
+     ...:   for fileid in nltk.corpus.state_union.fileids()
+     ...:   for w in nltk.corpus.state_union.words(fileid)
+     ...:   for target in ['men', 'women', 'people']
+     ...:   if w.lower().startswith(target))
+In [174]: cfd.plot()
+
+Do not understand why we use the :4… I thought we were only analysing a part of the text then.
+I also unsure about how to call different types of files, when to ask for the file id and when to also have it in the ending. 
+
+
+(should be a picture here, don't know how to put it in)
+People are the prefered word to use, first half of the period you can see there was some use of men too.
+
+5.  
+
+For me only ;)
+Et homonym (fra gresk homoios = «identisk» og onoma = «navn») er hvert av to eller flere ord som uttales og/eller skrives likt, men har ulikt opphav og ulik betydning.[1] Fordi de lett blandes sammen kalles de også forvekslingsord.
+
+
+holonym
+(lingvistik) ett ord som betecknar något som vad ett annat ord betecknar är en del av
+Cykel är en holonym till cykelhjul, eftersom cykelhjulet är en del av cykeln.
+
+Et meronym er et begrep som betegner en del av et annet begrep.
+
+>>> wn.synset('horse.n.01').member_meronyms()
+[Synset('foal.n.01')]
+
+>>> wn.synset('house.n.01').part_meronyms()
+[Synset('library.n.01'), Synset('loft.n.02'), Synset('porch.n.01'), Synset('study.n.05')]
+
+>>> wn.synset('bread.n.01').substance_meronyms()
+[Synset('flour.n.01')]
+
+>>> wn.synset('horse.n.01').member_holonyms()
+[Synset('equus.n.01')]
+
+>>> wn.synset('dog.n.01').member_holonyms()
+[Synset('canis.n.01'), Synset('pack.n.06')]
+
+>>> wn.synset('wheel.n.01').part_holonyms()
+[Synset('wheeled_vehicle.n.01')]
+
+>>> wn.synset('ice.n.01').substance_holonyms()
+[Synset('glacier.n.01'), Synset('ice_cube.n.01')]
+
+
+6. I belive it would be a problem with  for instance synonyms.
+In order to get this correct you need to get some context.
+
+7. 
+
+>>> text2.concordance("however")
+Displaying 25 of 155 matches:
+hters . He meant not to be unkind , however , and , as a mark of his affection 
+e condition of visitors . As such , however , they were treated by her with qui
+le ." His wife hesitated a little , however , in giving her consent to this pla
+urned Mrs . John Dashwood . " But , however , ONE thing must be considered . Wh
+ can ever afford to live in . But , however , so it is . Your father thought on
+ce inquiry or remark . Conversation however was not wanted , for Sir John was v
+sary to the happiness of both ; for however dissimilar in temper and outward be
+al engagements at home and abroad , however , supplied all the deficiencies of 
+s silent and grave . His appearance however was not unpleasing , in spite of hi
+n their own house . One consolation however remained for them , to which the ex
+ in the country ? That is good news however ; I will ride over tomorrow , and a
+ ever so rich . I am glad to find , however , from what you say , that he is a 
+t to the excellence of such works , however disregarded before . Their taste wa
+ly excited by her sister ; and that however a general resemblance of dispositio
+d Marianne . " Do not boast of it , however ," said Elinor , " for it is injust
+t will be any satisfaction to you , however , to be told , that I believe his c
+wo wives , I know not . A few years however will settle her opinions on the rea
+n his side impossible . His concern however was very apparent ; and after expre
+d her husband and mother . The idea however started by her , was immediately pu
+ are determined on anything . But , however , I hope you will think better of i
+ I can guess what his business is , however ," said Mrs . Jennings exultingly .
+>>> 
+>>> text4.concordance("however")
+Displaying 25 of 54 matches:
+ this extensive country . Relying , however , on the purity of their intentions
+t become me here to speak . I may , however , be pardoned for not suppressing t
+ accord in all questions touching , however remotely , the liberty , prosperity
+its overthrow . These occurrences , however , have been far less frequent in ou
+s and promises made in the former . However much the world may have improved in
+ered with the intention to betray . However strong may be my present purpose to
+e citizen . As was to be expected , however , from the defect of language and t
+lation to the latter also . It is , however , consolatory to reflect that most 
+the States to its correction . As , however , one mode of correction is in the 
+e our system . It may be observed , however , as a general remark , that republ
+ome others of a similar character , however , it appears to be highly expedient
+he judiciary to declare void ; that however enlightened and patriotic they migh
+ members of Congress might be , and however largely partaking , in the general 
+ur parent isle . There are others , however , which can not be introduced in ou
+of making it exclusively metallic , however well intended , appears to me to be
+ any distinct lines . Mischievous , however , in their tendencies as collisions
+of propriety . It may be observed , however , that organized associations of ci
+ed the institutions of each other , however repugnant to their own principles a
+culty in their financial concerns . However deeply we may regret anything impru
+estic concerns . It may be proper , however , that I should give some indicatio
+dy is with the people . Something , however , may be effected by the means whic
+earful responsibilities . Happily , however , in the performance of my new duti
+l congratulation . At that moment , however , when the agitation consequent upo
+ that event no form of government , however admirable in itself and however pro
+t , however admirable in itself and however productive of material benefits , c
+>>> text5.concordance("however")
+Displaying 1 of 1 matches:
+a sensitive matter of inheritance ; however , remain vigilant and even distrust
+
+
+8.From Names corpus that allows you to see which initial letters are more frequent for males vs. females
+
+>>> names = nltk.corpus.names
+>>> names.fileids()
+['female.txt', 'male.txt']
+>>> male_names = names.words('male.txt')
+>>> female_names = names.words('female.txt')
+>>> cfd = nltk.ConditionalFreqDist(
+... (fileid, name[1])
+... for fileid in names.fileids()
+... for name in names.words(fileid))
+>>> cfd.plot()
+
+
+
+
+
+9. 
+>>> moby = text1
+>>> sense = text2
+
+>>> float(len(moby)) / len(sense)
+1.8422543368932587
+
+Shows that Moby is almost twice as long as sense and sensebility
+
+>>> len(set(sense))
+6833
+>>> len(set(moby))
+19317
+
+Show that the vocabulary is richer in moby, way more than twice as big, that would be because of it´s lenght.
+
+
+>>> sense.concordance('monstrous')
+Displaying 11 of 11 matches:
+. " Now , Palmer , you shall see a monstrous pretty girl ." He immediately went
+your sister is to marry him . I am monstrous glad of it , for then I shall have
+ou may tell your sister . She is a monstrous lucky girl to get him , upon my ho
+k how you will like them . Lucy is monstrous pretty , and so good humoured and 
+ Jennings , " I am sure I shall be monstrous glad of Miss Marianne ' s company 
+ usual noisy cheerfulness , " I am monstrous glad to see you -- sorry I could n
+t however , as it turns out , I am monstrous glad there was never any thing in 
+so scornfully ! for they say he is monstrous fond of her , as well he may . I s
+possible that she should ." " I am monstrous glad of it . Good gracious ! I hav
+thing of the kind . So then he was monstrous happy , and talked on some time ab
+e very genteel people . He makes a monstrous deal of money , and they keep thei
+
+>>> moby.concordance('monstrous')
+Displaying 11 of 11 matches:
+ong the former , one was of a most monstrous size . ... This came towards us , 
+ON OF THE PSALMS . " Touching that monstrous bulk of the whale or ork we have r
+ll over with a heathenish array of monstrous clubs and spears . Some were thick
+d as you gazed , and wondered what monstrous cannibal and savage could ever hav
+that has survived the flood ; most monstrous and most mountainous ! That Himmal
+they might scout at Moby Dick as a monstrous fable , or still worse and more de
+th of Radney .'" CHAPTER 55 Of the Monstrous Pictures of Whales . I shall ere l
+ing Scenes . In connexion with the monstrous pictures of whales , I am strongly
+ere to enter upon those still more monstrous stories of them which are to be fo
+ght have been rummaged out of this monstrous cabinet there is no telling . But 
+of Whale - Bones ; for Whales of a monstrous size are oftentimes cast up dead u
+>>> 
+
+In sense and sensibility it seem like it´s used a lot together with 
+big emotions but also as in moby dick when something is big.
