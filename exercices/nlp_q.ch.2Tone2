@@ -257,3 +257,20 @@ science_fiction         0        25         8         2         0         1
         romance         0        88        56         8         0         0 
           humor         0        16        14         1         0         1 
 I did not use a lot of time finding words. But I would have thougth there would be a mention about belives in Religions. And I do belive judge us used in two different ways in news and hobby :)
+
+12.
+entries = nltk.corpus.cmudict.entries()
+all_words = [e[0] for e in entries]
+distinct_words = set(all_words)
+counts = FreqDist(all_words)
+polypron_words = [c for c in all_words if counts[c] > 1]
+final_fraction = len(polypron_words) / len(distinct_words)
+print ("The CMU pronuncing dictionary contains %i distinct_words" % len(distinct_words))
+print ("The fraction of words in this dictionnary which have",)
+print (" more than one possible pronunciation is %f" % final_fraction )   
+
+The CMU pronuncing dictionary contains 123455 distinct_words
+The fraction of words in this dictionnary which have
+ more than one possible pronunciation is 0.158139 
+  
+  
