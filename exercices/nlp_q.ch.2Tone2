@@ -238,3 +238,22 @@ of Whale - Bones ; for Whales of a monstrous size are oftentimes cast up dead u
 
 In sense and sensibility it seem like it´s used a lot together with 
 big emotions but also as in moby dick when something is big.
+
+11. 
+>>> cfd = nltk.ConditionalFreqDist(
+... (genre, word)
+... for genre in brown.categories()
+... for word in brown.words(categories=genre))
+
+>>> 
+>>> genres = ['news', 'religion', 'hobbies', 'science_fiction', 'romance', 'humor']
+>>> modals = ['belive', 'know', 'think', 'truth', 'convicted', 'judge']
+>>> cfd.tabulate(conditions=genres, samples=modals)
+                   belive      know     think     truth convicted     judge 
+           news         0        28        27         7         4        11 
+       religion         0        30        17         7         1         1 
+        hobbies         0        23        11         2         0         8 
+science_fiction         0        25         8         2         0         1 
+        romance         0        88        56         8         0         0 
+          humor         0        16        14         1         0         1 
+I did not use a lot of time finding words. But I would have thougth there would be a mention about belives in Religions. And I do belive judge us used in two different ways in news and hobby :)
