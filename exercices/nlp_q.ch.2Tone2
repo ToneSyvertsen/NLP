@@ -273,4 +273,13 @@ The CMU pronuncing dictionary contains 123455 distinct_words
 The fraction of words in this dictionnary which have
  more than one possible pronunciation is 0.158139 
   
-  
+ 
+13.  
+from nltk.corpus import wordnet as wn
+wn.all_synsets('n')
+
+nb_syn = sum(1 for _ in wn.all_synsets('n'))
+fac = len([s for s in wn.all_synsets('n') if len(s.hyponyms()) == 0]) / nb_syn * 100
+print ("The percentage of noun synsets with no hyponyms is %f" % fac)
+
+The percentage of noun synsets with no hyponyms is 79.671193
