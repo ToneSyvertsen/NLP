@@ -9,6 +9,13 @@ Out[131]: 'colorless'
 
 ```
 
+```
+s.split("colorless" [4])
+Out[140]: ['colo', 'less']
+
+## not finished
+```
+
 This was my fist thought but by using this method the change is not saved
 
 ```
