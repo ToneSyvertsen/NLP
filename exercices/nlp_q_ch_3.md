@@ -46,6 +46,37 @@ Out[206]: 'colourless'
 
 2. ☼ We can use the slice notation to remove morphological endings on words. For example, 'dogs'[:-1] removes the last character of dogs, leaving dog. Use slice notation to remove the affixes from these words (we've inserted a hyphen to indicate the affix boundary, but omit this from your strings): dish-es, run-ning, nation-ality, un-do, pre-heat.
 
+I don't know if I interpreted this question correct..
+
+```
+w = 'dishes'
+w = w[:4]
+print (w)
+
+w2 = 'running'
+w2 = w2[:3]
+print(w2)
+
+w3 = 'nationality'
+w3 = w3[:6]
+print(w3)
+
+w4 = 'undo'
+w4 = w4[:2]
+print(w4)
+
+w5 = 'preheat'
+w5 = w5[:3]
+print(w5)
+dish
+run
+nation
+un
+pre
+
+```
+
+
 3. ☼ We saw how we can generate an IndexError by indexing beyond the end of a string. Is it possible to construct an index that goes too far to the left, before the start of the string?
 
 4. ☼ We can specify a "step" size for the slice. The following returns every second character within the slice: monty[6:11:2]. It also works in the reverse direction: monty[10:5:-2] Try these for yourself, then experiment with different step values.
