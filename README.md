@@ -7,6 +7,6 @@ Contribution settings
 
 *Exercise index*
 
-*[Chapter 1](NLP/exercices/nlp_q.ch.1Tone.gdoc)* (googledoc and not complete)
-*[Chapter 2](NLP/exercices/nlp_q.ch.2Tone.gdoc)*(googledoc and not complete)
-*[Chapter 2](NLP/exercices/nlp_q_ch_3.md)*
+1. *[Chapter 1](/exercices/nlp_q.ch.1Tone.gdoc)* (googledoc and not complete)
+2. *[Chapter 2](/exercices/nlp_q.ch.2Tone.gdoc)*(googledoc and not complete)
+3. *[Chapter 2](/exercices/nlp_q_ch_3.md)*
