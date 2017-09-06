@@ -8,16 +8,27 @@ s
 Out[131]: 'colorless'
 
 ```
+s = 'colorless'
+s= s.split("r") 
+s.insert(1, 'ur')
+s= ''.join(s)
+
+s
+Out[204]: 'colourless'
+
+```
+
+this next one is just to show whats going on inbetween
 ```
 s = 'colorless'
 s= s.split("r") 
-print (s)
+print (s)         #this is just to se whats going on
 s.insert(1, 'ur')
-print (s)
+print (s)         #this is just to se whats going on
 s= ''.join(s)
 s
-['colo', 'less']
-['colo', 'ur', 'less']
+['colo', 'less']             #print1
+['colo', 'ur', 'less']       #print2
 Out[200]: 'colourless'
 ```
 
