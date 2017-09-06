@@ -3,7 +3,7 @@ For example, access a weather site and extract the forecast top temperature for 
 Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things
 
 
-
+```
     In [89]: import nltk, re, pprint
         ...: from nltk import word_tokenize
         ...: from urllib import request
