@@ -1,0 +1,100 @@
+20. ◑ Write code to access a favorite webpage and extract some text from it. 
+For example, access a weather site and extract the forecast top temperature for your town or city today.
+Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things
+
+'''
+In [89]: import nltk, re, pprint
+    ...: from nltk import word_tokenize
+    ...: from urllib import request
+    ...: from bs4 import BeautifulSoup
+    ...: import feedparser
+    ...: 
+    ...: url = "http://cvnerden.no/eksempler-pa-cv-og-soknad-2/"
+    ...: html = request.urlopen(url).read().decode('utf8')
+    ...: raw = BeautifulSoup(html, "lxml").get_text()
+    ...: tokens = word_tokenize(raw)
+    ...: len(tokens)
+Out[89]: 2872
+'''
+
+'''
+text = nltk.Text(tokens)
+len(text)
+Out[95]: 2872
+'''
+
+'''
+text.collocations()
+Slik får; flaks trenger; jobbsoking.com says; Med litt; lenge før;
+litt flaks; har landet; før den; jobb lenge; landet jobb; aller
+viktigste; dem ikke; FANTASTISK søknad; senere Slik; søknadOg senere;
+ung person; vet hva; den tid.Se; tid.Se mer; *Relevant annonse
+'''
+
+'''
+title = text[:5]
+title
+Out[115]: ['Eksempler', 'på', 'CV', 'og', 'søknad']
+'''
+
+'''
+title2 = " ".join(title)
+title2
+Out[116]: 'Eksempler på CV og søknad'
+'''
+
+'''
+word="Ting"
+if word in text:
+    print( word, " is in the sentence")
+    for i, j in enumerate(text):
+        if j == word:
+            print("'"+word+"'","is in position",i+1)
+Ting  is in the sentence
+'Ting' is in position 1132
+'Ting' is in position 1397
+'''
+'''
+word="Søkeren"
+if word in text:
+    print( word, " is in the sentence")
+    for i, j in enumerate(text):
+        if j == word:
+            print("'"+word+"'","is in position",i+1)
+Søkeren  is in the sentence
+'Søkeren' is in position 1402
+'Søkeren' is in position 1422
+'Søkeren' is in position 1662
+'''
+
+'''
+text = nltk.Text(tokens)
+text = text[1401:1420]
+text
+Out[129]: 
+['Søkeren',
+ '(',
+ 'jeg',
+ ')',
+ 'bruker',
+ 'bulletpoints',
+ 'når',
+ 'han',
+ 'skal',
+ 'beskrive',
+ 'arbeidsoppgavene',
+ '–',
+ 'dette',
+ 'kan',
+ 'gjøre',
+ 'CV-en',
+ 'tydelig',
+ 'og',
+ 'lettlest']
+'''
+
+'''
+text2 = " ".join(text)
+text2
+Out[130]: 'Søkeren ( jeg ) bruker bulletpoints når han skal beskrive arbeidsoppgavene – dette kan gjøre CV-en tydelig og lettlest'
+'''
