@@ -1,4 +1,4 @@
-#H Exercises Chapter 3
+# H1 Exercises Chapter 3
 
 1. ☼ Define a string s = 'colorless'. Write a Python statement that changes this to "colourless" using only the slice and concatenation operations.
 
