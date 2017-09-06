@@ -6,11 +6,12 @@
 s = 'colorless'
 s
 Out[131]: 'colorless'
+
 ```
 
 This was my fist thought but by using this method the change is not saved
 
-
+```
 s.replace('colorless', "colourless")
 Out[133]: 'colourless'
 
