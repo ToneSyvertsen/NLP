@@ -4,3 +4,9 @@ This repository will contain my notes and solutions to the questions in the book
 note that this answeres are just my suggestions for solution and are very possible wrong
 
 Contribution settings 
+
+*Exercise index*
+
+*[Chapter 1](NLP/exercices/nlp_q.ch.1Tone.gdoc)* (googledoc and not complete)
+*[Chapter 2](NLP/exercices/nlp_q.ch.2Tone.gdoc)*(googledoc and not complete)
+*[Chapter 2](NLP/exercices/nlp_q_ch_3.md)*
