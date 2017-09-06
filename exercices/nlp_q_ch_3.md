@@ -8,15 +8,21 @@ s
 Out[131]: 'colorless'
 
 ```
-
 ```
-s.split("colorless" [4])
-Out[140]: ['colo', 'less']
-
-## not finished
+s = 'colorless'
+s= s.split("r") 
+print (s)
+s.insert(1, 'ur')
+print (s)
+s= ''.join(s)
+s
+['colo', 'less']
+['colo', 'ur', 'less']
+Out[200]: 'colourless'
 ```
 
-This was my fist thought but by using this method the change is not saved
+
+This was my fist thought, but by using this method the change is not saved
 
 ```
 s.replace('colorless', "colourless")
