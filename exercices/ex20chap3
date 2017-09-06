@@ -2,6 +2,38 @@
 For example, access a weather site and extract the forecast top temperature for your town or city today.
 Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things
 
+```python
+phrase = ['The', 'ended', 'beginner', 'shines', 'before', 'a', 'house']
+phrase_add = phrase + ['!']
+phrase_add 
+    ['The', 'ended', 'beginner', 'shines', 'before', 'a', 'house', '!']
+phrase_mul = phrase*2
+phrase_mul
+    ['The',
+     'ended',
+     'beginner',
+     'shines',
+     'before',
+     'a',
+     'house',
+     'The',
+     'ended',
+     'beginner',
+     'shines',
+     'before',
+     'a',
+     'house']
+phrase_ind = phrase[3]
+phrase_ind
+    'shines'
+pharse_sli = phrase[:-2]
+pharse_sli 
+    ['The', 'ended', 'beginner', 'shines', 'before']
+phrase_sort = sorted(w.lower() for w in phrase)
+phrase_sort
+    ['a', 'before', 'beginner', 'ended', 'house', 'shines', 'the']
+```
+
 """ python
 In [89]: import nltk, re, pprint
     ...: from nltk import word_tokenize
