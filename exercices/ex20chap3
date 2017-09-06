@@ -4,6 +4,7 @@ Since I did not choose weather (Norwegian forcastes is really not that interesti
 
 
 ```python
+
     In [89]: import nltk, re, pprint
         ...: from nltk import word_tokenize
         ...: from urllib import request
@@ -17,6 +18,7 @@ Since I did not choose weather (Norwegian forcastes is really not that interesti
         ...: len(tokens)
     Out[89]: 2872
 
+```
 
 
 text = nltk.Text(tokens)
