@@ -35,14 +35,12 @@ Out[200]: 'colourless'
 ```
 
 
-This was my fist thought, but by using this method the change is not saved
+This was my fist thought, but by using this I will not use slice and concatenation operations..
 
 ```
-s.replace('colorless', "colourless")
-Out[133]: 'colourless'
-
+s = s.replace('colorless', "colourless")
 s
-Out[134]: 'colorless'
+Out[206]: 'colourless'
 
 ```
 
