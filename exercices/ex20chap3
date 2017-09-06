@@ -3,6 +3,8 @@ For example, access a weather site and extract the forecast top temperature for 
 Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things
 
 
+I startede by counting the words
+
 ```python
 
     In [89]: import nltk, re, pprint
@@ -20,15 +22,15 @@ Since I did not choose weather (Norwegian forcastes is really not that interesti
 
 ```
 
-
+Rename tokens to text
 
 ```python
 
 text = nltk.Text(tokens)
-len(text)
-Out[95]: 2872
 
 ```
+
+Trying collocation
 
 ```python
 
@@ -39,6 +41,9 @@ viktigste; dem ikke; FANTASTISK søknad; senere Slik; søknadOg senere;
 ung person; vet hva; den tid.Se; tid.Se mer; *Relevant annonse
 
 ```
+Seems like it finds the links on the page??
+
+Then I try to find and name the title
 
 ```python
 
@@ -48,6 +53,8 @@ Out[115]: ['Eksempler', 'på', 'CV', 'og', 'søknad']
 
 ```
 
+I dont like the title to be a list so try to make it look like a string
+
 ```python
 
 title2 = " ".join(title)
@@ -55,6 +62,10 @@ title2
 Out[116]: 'Eksempler på CV og søknad'
 
 ```
+
+Is it possible to find the position of words in the text so you don't have to guess the position?
+I try to find a codesnippet for that
+
 
 ```python
 
@@ -69,7 +80,7 @@ Ting  is in the sentence
 'Ting' is in position 1397
 
 ```
-
+Then I want to locate the first bulletpoint in the text, and wants to fint it's location
 
 ```python
 
@@ -85,7 +96,7 @@ Søkeren  is in the sentence
 'Søkeren' is in position 1662
 
 ```
-
+Then I try to show the intire bulletpoint
 
 ```python
 
@@ -115,7 +126,7 @@ Out[129]:
  
 ```
 
-
+Don't want it to be a list so use .join
 
 ```python
 
