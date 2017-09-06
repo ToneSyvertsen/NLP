@@ -5,7 +5,7 @@ Since I did not choose weather (Norwegian forcastes is really not that interesti
 
 I startede by counting the words
 
-```python
+```
 
     In [89]: import nltk, re, pprint
         ...: from nltk import word_tokenize
