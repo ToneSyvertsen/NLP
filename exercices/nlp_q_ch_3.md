@@ -8,6 +8,8 @@ s
 Out[131]: 'colorless'
 
 ```
+
+```
 s = 'colorless'
 s= s.split("r") 
 s.insert(1, 'ur')
