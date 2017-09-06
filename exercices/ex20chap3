@@ -16,9 +16,9 @@ In [89]: import nltk, re, pprint
     ...: tokens = word_tokenize(raw)
     ...: len(tokens)
 Out[89]: 2872
-"""
+´´´
 
-'''
+
 text = nltk.Text(tokens)
 len(text)
 Out[95]: 2872
