@@ -1,6 +1,8 @@
 20. ◑ Write code to access a favorite webpage and extract some text from it. 
 For example, access a weather site and extract the forecast top temperature for your town or city today.
-Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things
+
+
+**Since I did not choose weather (Norwegian forcastes is really not that interesting in September :P) I had to try out some other things**
 
 
 I startede by counting the words
