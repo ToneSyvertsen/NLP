@@ -176,7 +176,7 @@ This time, Python should return with a value. You can also try import prog, in w
 
 20. ◑ Write code to access a favorite webpage and extract some text from it. For example, access a weather site and extract the forecast top temperature for your town or city today.
 
-* [see my answere here] (NLP/exercices/ex20chap3.md) *
+** [see my answere here] (ex20chap3.md) **
 
 21. ◑ Write a function unknown() that takes a URL as its argument, and returns a list of unknown words that occur on that webpage. In order to do this, extract all substrings consisting of lowercase letters (using re.findall()) and remove any items from this set that occur in the Words Corpus (nltk.corpus.words). Try to categorize these words manually and discuss your findings.
 
