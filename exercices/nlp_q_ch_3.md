@@ -159,11 +159,15 @@ Out[252]: ['Per', 'Cexpialidocious', 'P']
 
 _p[aeiou]{,2}t_ 
 
-```
+I don't know :(
 
 ```
+word = 'suPer califragilist5iCexpialidocious2P'
+re.findall(r'p[aeiou]{,2}t',word)
+Out[256]: []
+```
 
-**\d+(\.\d+)? 
+_\d+(\.\d+)?_ 
 
 ```
 
