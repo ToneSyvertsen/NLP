@@ -79,6 +79,15 @@ pre
 
 3. ☼ We saw how we can generate an IndexError by indexing beyond the end of a string. Is it possible to construct an index that goes too far to the left, before the start of the string?
 
+If I interpreted the question right I belive this is the answere
+
+```
+w[:0]
+Out[219]: ''
+
+```
+
+
 4. ☼ We can specify a "step" size for the slice. The following returns every second character within the slice: monty[6:11:2]. It also works in the reverse direction: monty[10:5:-2] Try these for yourself, then experiment with different step values.
 
 5. ☼ What happens if you ask the interpreter to evaluate monty[::-1]? Explain why this is a reasonable result.
