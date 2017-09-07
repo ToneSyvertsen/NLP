@@ -91,7 +91,7 @@ Out[219]: ''
 
 4. ☼ We can specify a "step" size for the slice. The following returns every second character within the slice: monty[6:11:2]. It also works in the reverse direction: monty[10:5:-2] Try these for yourself, then experiment with different step values.
 
-
+```
 monty = 'Monty Python'
 
 monty[6:11:2]
@@ -109,7 +109,7 @@ Out[231]: ''
 monty[2:10:-3]
 Out[232]: ''
 monty[2:10:3]
-Out[233]: 'n t'```
+Out[233]: 'n t'
 
 ```
 
