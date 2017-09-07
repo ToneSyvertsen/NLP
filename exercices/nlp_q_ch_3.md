@@ -129,6 +129,7 @@ You can do the same as in 4, but the answere will be in reverse. This example is
 monty[::-2]
 Out[238]: 'nhy to'
 
+```
 
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
