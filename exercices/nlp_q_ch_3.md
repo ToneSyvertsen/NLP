@@ -134,8 +134,26 @@ Out[238]: 'nhy to'
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
 [a-zA-Z]+ 
+Find all letters from the expression, both uppercase and lowercase letters, the plus sign put together the letters. If there are a space or other characters the "word" will be divided. 
+
+```
+word = 'suPer califragilist5iCexpialidocious2P'
+re.findall(r'[A-Z][a-z]+', word)
+Out[253]: ['Per', 'Cexpialidocious']
+
+```
 
 [A-Z][a-z]* 
+Find all letters from the expression after an uppercase letter and stops when there are other caractersin the strin as space or numbers. 
+The * does the same as + but also able to put in a single letter
+
+```
+word = 'suPer califragilist5iCexpialidocious2P'
+re.findall(r'[A-Z][a-z]*', word)
+Out[252]: ['Per', 'Cexpialidocious', 'P']
+
+```
+
 
 p[aeiou]{,2}t 
 
