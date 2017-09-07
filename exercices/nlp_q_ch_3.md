@@ -169,7 +169,7 @@ Out[256]: []
 
 _\d+(\.\d+)?_ 
 
-Finds the numbers, and prints the decimals if a number but non decimals it returns ''.
+Finds the numbers, and prints the decimals. If the number has no decimals it returns ' '.
 The question mark needs one or zero previous caracters, if you don't use this the two empty quotes will not show. 
 ```
 word = '1.44suPer cali3.1 fragilist5iCexpialidocious2P'
