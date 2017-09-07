@@ -133,7 +133,8 @@ Out[238]: 'nhy to'
 
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
-[a-zA-Z]+ 
+**[a-zA-Z]+ 
+
 Find all letters from the expression, both uppercase and lowercase letters, the plus sign put together the letters. If there are a space or other characters the "word" will be divided. 
 
 ```
