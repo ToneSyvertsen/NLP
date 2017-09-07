@@ -133,12 +133,12 @@ Out[238]: 'nhy to'
 
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
-[a-zA-Z]+
-[A-Z][a-z]*
-p[aeiou]{,2}t
-\d+(\.\d+)?
-([^aeiou][aeiou][^aeiou])*
-\w+|[^\w\s]+
+[a-zA-Z]+ /
+[A-Z][a-z]* /
+p[aeiou]{,2}t /
+\d+(\.\d+)? /
+([^aeiou][aeiou][^aeiou])* /
+\w+|[^\w\s]+ /
 Test your answers using nltk.re_show().
 
 7. ☼ Write regular expressions to match the following classes of strings:
