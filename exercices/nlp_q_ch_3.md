@@ -133,7 +133,7 @@ Out[238]: 'nhy to'
 
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
-** [a-zA-Z]+ ** 
+**[a-zA-Z]+ 
 
 Find all letters from the expression, both uppercase and lowercase letters, the plus sign put together the letters. If there are a space or other characters the "word" will be divided. 
 
@@ -144,7 +144,7 @@ Out[253]: ['Per', 'Cexpialidocious']
 
 ```
 
-** [A-Z][a-z]* **
+**[A-Z][a-z]* 
 
 Find all letters from the expression after an uppercase letter and stops when there are other caractersin the strin as space or numbers. 
 The * does the same as + but also able to put in a single letter
@@ -157,27 +157,27 @@ Out[252]: ['Per', 'Cexpialidocious', 'P']
 ```
 
 
-** p[aeiou]{,2}t **
+**p[aeiou]{,2}t 
 
 ```
 
 ```
 
-** \d+(\.\d+)? **
-
-```
-
-```
-
-
-** ([^aeiou][aeiou][^aeiou])* **
+**\d+(\.\d+)? 
 
 ```
 
 ```
 
 
-** \w+|[^\w\s]+ **
+**([^aeiou][aeiou][^aeiou])* 
+
+```
+
+```
+
+
+**\w+|[^\w\s]+ 
 
 ```
 
