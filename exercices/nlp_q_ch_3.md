@@ -117,6 +117,18 @@ Out[234]: 'nt'
 
 
 5. ☼ What happens if you ask the interpreter to evaluate monty[::-1]? Explain why this is a reasonable result.
+It reverse the word starting on the last letter.
+
+```
+monty[::-1]
+Out[235]: 'nohtyP ytnoM'
+
+``` 
+You can do the same as in 4, but the answere will be in reverse. This example is every secondletter reversed.
+```
+monty[::-2]
+Out[238]: 'nhy to'
+
 
 6. ☼ Describe the class of strings matched by the following regular expressions.
 
