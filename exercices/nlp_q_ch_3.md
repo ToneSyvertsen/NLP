@@ -139,7 +139,7 @@ Find all letters from the expression, both uppercase and lowercase letters, the 
 
 ```
 word = 'suPer califragilist5iCexpialidocious2P'
-re.findall(r'[A-Z][a-z]+', word)
+re.findall('[A-Z][a-z]+', word)
 Out[253]: ['Per', 'Cexpialidocious']
 
 ```
@@ -151,7 +151,7 @@ The * does the same as + but also able to put in a single letter
 
 ```
 word = 'suPer califragilist5iCexpialidocious2P'
-re.findall(r'[A-Z][a-z]*', word)
+re.findall('[A-Z][a-z]*', word)
 Out[252]: ['Per', 'Cexpialidocious', 'P']
 
 ```
@@ -163,7 +163,7 @@ I don't know :(
 
 ```
 word = 'suPer califragilist5iCexpialidocious2P'
-re.findall(r'p[aeiou]{,2}t',word)
+re.findall('p[aeiou]{,2}t',word)
 Out[256]: []
 ```
 
@@ -173,7 +173,7 @@ Finds the numbers, and prints the decimals if a number but non decimals it retur
 The question mark needs one or zero previous caracters, if you don't use this the two empty quotes will not show. 
 ```
 word = '1.44suPer cali3.1 fragilist5iCexpialidocious2P'
-re.findall(r'\d+(\.\d+)?',word)
+re.findall('\d+(\.\d+)?',word)
 Out[261]: ['.44', '.1', '', '']
 
 ```
