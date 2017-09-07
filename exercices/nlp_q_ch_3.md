@@ -181,9 +181,61 @@ Out[261]: ['.44', '.1', '', '']
 
 _([^aeiou][aeiou][^aeiou])*_
 
+Eh don't get all of it. But the * gives a lot of emty resutts..
 ```
+re.findall(([^aeiou][aeiou][^aeiou])*', word)
+
+word = '1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P'
+re.findall(r'([^aeiou][aeiou][^aeiou])*', word)
+Out[285]: 
+['',
+ '',
+ '',
+ '',
+ '',
+ '&uP',
+ '',
+ '',
+ ' al',
+ '',
+ '',
+ '',
+ '',
+ '',
+ '',
+ 'rag',
+ '',
+ '',
+ 'lis',
+ '',
+ '5iC',
+ '',
+ '',
+ '',
+ '',
+ '',
+ 'lid',
+ '',
+ '',
+ '',
+ '',
+ '',
+ '',
+ '',
+ '',
+ '']
+ 
+ 
+ 
+ without *
+ 
+word = '1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P'
+re.findall(r'([^aeiou][aeiou][^aeiou])', word)
+Out[286]: ['&uP', ' al', 'rag', 'lis', '5iC', 'lid']
 
 ```
+
+
 
 
 _\w+|[^\w\s]+_ 
