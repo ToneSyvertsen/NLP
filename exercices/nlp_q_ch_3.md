@@ -188,7 +188,26 @@ _([^aeiou][aeiou][^aeiou])*_
 
 _\w+|[^\w\s]+_ 
 
+This string collects all words, stop at every non alphanumeric caracter or space
+\w	Any alphanumeric character (equivalent to [a-zA-Z0-9_])
+\s	Any whitespace character (equivalent to [ \t\n\r\f\v])
+
 ```
+
+word = '1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P'
+re.findall(r'\w+|[^\w\s]+',word)
+Out[277]: 
+['1',
+ '.',
+ '44s',
+ '&',
+ 'uPer',
+ 'ali5',
+ '.',
+ '1',
+ 'fragi',
+ '(',
+ 'list5iCexpialidocious2P']
 
 ```
 
