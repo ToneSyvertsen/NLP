@@ -144,7 +144,7 @@ Out[253]: ['Per', 'Cexpialidocious']
 
 ```
 
-**[A-Z][a-z]* 
+_[A-Z][a-z]*_ 
 
 Find all letters from the expression after an uppercase letter and stops when there are other caractersin the strin as space or numbers. 
 The * does the same as + but also able to put in a single letter
