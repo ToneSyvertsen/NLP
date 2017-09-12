@@ -282,6 +282,19 @@ nltk.re_show('\w+|[^\w\s]+',word)
 
 Test your answers using nltk.re_show().
 
+Book question in chap 3.5
+
+Your Turn: In the W3C Date Time Format, dates are represented like this: 2009-12-31. Replace the ? in the following Python code with a regular expression, in order to convert the string '2009-12-31' to a list of integers [2009, 12, 31]:
+
+[int(n) for n in re.findall(?, '2009-12-31')]
+
+```
+[int(n) for n in re.findall('[0-9]+','2009-12-31')]
+Out[337]: [2009, 12, 31]
+
+```
+
+
 7. ☼ Write regular expressions to match the following classes of strings:
 
 A single determiner (assume that a, an, and the are the only determiners).
