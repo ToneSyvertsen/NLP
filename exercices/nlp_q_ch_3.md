@@ -357,6 +357,22 @@ This time, Python should return with a value. You can also try import prog, in w
 
 18. ◑ Read in some text from a corpus, tokenize it, and print the list of all wh-word types that occur. (wh-words in English are used in questions, relative clauses and exclamations: who, which, what, and so on.) Print them in order. Are any words duplicated in this list, because of the presence of case distinctions or punctuation?
 
+I allso took away the duplicates
+
+```
+from nltk.corpus import gutenberg
+raw = gutenberg.raw('melville-moby_dick.txt')
+
+
+tokens = nltk.word_tokenize(raw)
+
+wh_words=sorted(set(word for word in tokens if word.startswith('wh')))
+#wh_words.sort()
+
+print(wh_words)
+
+```
+
 19. ◑ Create a file consisting of words and (made up) frequencies, where each line consists of a word, the space character, and a positive integer, e.g. fuzzy 53. Read the file into a Python list using open(filename).readlines(). Next, break each line into its two fields using split(), and convert the number into an integer using int(). The result should be a list of the form:  [['fuzzy', 53], ...].
 
 20. ◑ Write code to access a favorite webpage and extract some text from it. For example, access a weather site and extract the forecast top temperature for your town or city today.
