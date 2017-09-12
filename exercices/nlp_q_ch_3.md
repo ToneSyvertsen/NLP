@@ -393,6 +393,21 @@ Oh|/<=![]()?/&[
 ```
 
 a)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
+I don't get it to work yet..
+
+```
+girl= load('just_a_girl.txt')
+pattern = r'''(?x)    # set flag to allow verbose regexps
+    ([A-Z]\.)+        # abbreviations, e.g. U.S.A.
+    | \w+(-\w+)*        # words with optional internal hyphens
+    \.\.\.            # ellipsis
+    | [][.,;"'?():-_`!]  # these are separate tokens; includes ], [
+    '''
+    
+nltk.regexp_tokenize(girl, pattern)
+
+    
+```
 
 
 b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.
