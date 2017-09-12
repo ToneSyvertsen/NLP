@@ -297,8 +297,26 @@ Out[337]: [2009, 12, 31]
 
 7. ☼ Write regular expressions to match the following classes of strings:
 
-A single determiner (assume that a, an, and the are the only determiners).
-An arithmetic expression using integers, addition, and multiplication, such as 2*3+8.
+a)A single determiner (assume that a, an, and the are the only determiners).
+
+I don't knoe what I'm suppose to do here but made two expressions one giving the words comming before and another the words coming after this determiners..
+
+before:
+
+``` 
+moby.findall(r"(<.*>) <a | an | the>")
+
+```
+
+
+after:
+
+```
+moby.findall(r" <a | an | the>(<.*>)")
+
+```
+
+b)An arithmetic expression using integers, addition, and multiplication, such as 2*3+8.
 
 8. ☼ Write a utility function that takes a URL as its argument, and returns the contents of the URL, with all HTML markup removed. Use from urllib import request and then  request.urlopen('http://nltk.org/').read().decode('utf8') to access the contents of the URL.
 
