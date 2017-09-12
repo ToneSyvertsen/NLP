@@ -318,6 +318,9 @@ moby.findall(r" <a | an | the>(<.*>)")
 
 b)An arithmetic expression using integers, addition, and multiplication, such as 2*3+8.
 
+???
+Don't understand what I'm suppose to do here..
+
 8. ☼ Write a utility function that takes a URL as its argument, and returns the contents of the URL, with all HTML markup removed. Use from urllib import request and then  request.urlopen('http://nltk.org/').read().decode('utf8') to access the contents of the URL.
 
 9. ☼ Save some text into a file corpus.txt. Define a function load(f) that reads from the file named in its sole argument, and returns a string containing the text of the file.
