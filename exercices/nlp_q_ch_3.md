@@ -363,12 +363,9 @@ I allso took away the duplicates
 from nltk.corpus import gutenberg
 raw = gutenberg.raw('melville-moby_dick.txt')
 
-
 tokens = nltk.word_tokenize(raw)
 
 wh_words=sorted(set(word for word in tokens if word.startswith('wh')))
-#wh_words.sort()
-
 print(wh_words)
 
 ```
