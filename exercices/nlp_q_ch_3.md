@@ -159,6 +159,15 @@ Out[252]: ['Per', 'Cexpialidocious', 'P']
 
 _p[aeiou]{,2}t_ 
 
+```
+
+word = '1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P'
+nltk.re_show('p[aeiou]{,2}t',word)
+1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P
+
+```
+
+
 I don't know :(
 
 ```
@@ -238,6 +247,7 @@ Out[286]: ['&uP', ' al', 'rag', 'lis', '5iC', 'lid']
 
 
 
+
 _\w+|[^\w\s]+_ 
 
 This string collects all words, stop at every non alphanumeric caracter or space
@@ -263,6 +273,12 @@ Out[277]:
 
 ```
 
+```
+word = '1.44s&uPer ali5.1 fragi(list5iCexpialidocious2P'
+nltk.re_show('\w+|[^\w\s]+',word)
+{1}{.}{44s}{&}{uPer} {ali5}{.}{1} {fragi}{(}{list5iCexpialidocious2P}
+
+```
 
 Test your answers using nltk.re_show().
 
