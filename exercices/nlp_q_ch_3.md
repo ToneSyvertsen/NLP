@@ -345,8 +345,57 @@ print (gettextfromurl('http://testicanzoni.mtv.it/testi-Eivind-B%C3%B8ksle_24997
 ``` 
 9. ☼ Save some text into a file corpus.txt. Define a function load(f) that reads from the file named in its sole argument, and returns a string containing the text of the file.
 
-Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
-Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.
+Her I have made the function load(f)
+
+```
+def load(f):
+    gettext = open(f)
+    text = gettext.read()
+    return text
+
+print(load('just_a_girl.txt'))
+
+Just a Girl
+No Doubt
+Take this pink ribbon off my eyes
+I'm exposed
+And it's no big surprise
+Don't you think I know
+Exactly where I stand
+This world is forcing me
+To hold your hand
+'Cause I'm just a girl, little ol' me
+Well don't let me out of your sight
+Oh, I'm just a girl, all pretty and petite
+So don't let me have any rights
+Oh, I've had it up to here!
+The moment that I step outside
+So many reasons
+For me to run and hide
+I can't do the little things
+I hold so dear
+'Cause it's all those little things
+That I fear
+'Cause I'm just a girl
+I'd rather not be
+'Cause they won't let me drive
+Late at night
+Oh I'm just a girl
+Guess I'm some kind of freak
+'Cause they all sit and stare
+With their eyes
+Oh I'm just a girl
+Take a good look at me
+Just your typical prototype
+Oh, I've had it up to here!
+Oh
+
+```
+
+a)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
+
+
+b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.
 
 10. ☼ Rewrite the following loop as a list comprehension:
 
