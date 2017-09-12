@@ -388,7 +388,7 @@ Oh I'm just a girl
 Take a good look at me
 Just your typical prototype
 Oh, I've had it up to here!
-Oh
+Oh|/<=![]()?/&[
 
 ```
 
