@@ -323,6 +323,26 @@ Don't understand what I'm suppose to do here..
 
 8. ☼ Write a utility function that takes a URL as its argument, and returns the contents of the URL, with all HTML markup removed. Use from urllib import request and then  request.urlopen('http://nltk.org/').read().decode('utf8') to access the contents of the URL.
 
+borrowed the recipe from http://compling.hss.ntu.edu.sg/courses/hg2051/code/wk7b.html
+
+```
+
+def gettextfromurl(url):
+    cleaning = request.urlopen(url).read().decode('utf-8');
+    ## lose the line endings
+    cleaning = re.sub(r'\n', ' ', cleaning)
+    ### lose the javascript
+    cleaning = re.sub(r'<script.*?script>', '', cleaning, re.S)
+    ## lose the html tags
+    cleaning = re.sub(r'<.*?>', '', cleaning)
+    ## clean up whitespace
+    cleaned = re.sub(r'\s+', ' ', cleaning)
+    return cleaned
+
+print (gettextfromurl('http://testicanzoni.mtv.it/testi-Eivind-B%C3%B8ksle_24997710/testo-%C3%86-Ser-D%C3%A6-P%C3%A5-Markens-I-Kveld-36843982')[:28])
+    Æ Ser Dæ På Markens I Kveld
+
+``` 
 9. ☼ Save some text into a file corpus.txt. Define a function load(f) that reads from the file named in its sole argument, and returns a string containing the text of the file.
 
 Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
