@@ -416,19 +416,103 @@ Oh|/<=![]()?/&[
 ```
 
 a)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
-I don't get it to work yet..
+I don't get it to work properly, why do all the capital letters join? If I write an expression to get them away all other letters and spaces get included in the list :P
 
 ```
 girl= load('just_a_girl.txt')
-pattern = r'''(?x)    # set flag to allow verbose regexps
-    ([A-Z]\.)+        # abbreviations, e.g. U.S.A.
-    | \w+(-\w+)*        # words with optional internal hyphens
-    \.\.\.            # ellipsis
-    | [][.,;"'?():-_`!]  # these are separate tokens; includes ], [
+pattern = r'''#(?x)    # set flag to allow verbose regexps
+    [.,;"'?():-_`!] # these are separate tokens; 
     '''
-    
-nltk.regexp_tokenize(girl, pattern)
 
+nltk.regexp_tokenize(girl, pattern)
+Out[555]: 
+['J',
+ 'G',
+ 'N',
+ 'D',
+ 'T',
+ 'I',
+ "'",
+ 'A',
+ "'",
+ 'D',
+ "'",
+ 'I',
+ 'E',
+ 'I',
+ 'T',
+ 'T',
+ "'",
+ 'C',
+ 'I',
+ "'",
+ ',',
+ "'",
+ 'W',
+ "'",
+ 'O',
+ ',',
+ 'I',
+ "'",
+ ',',
+ 'S',
+ "'",
+ 'O',
+ ',',
+ 'I',
+ "'",
+ '!',
+ 'T',
+ 'I',
+ 'S',
+ 'F',
+ 'I',
+ "'",
+ 'I',
+ "'",
+ 'C',
+ "'",
+ 'T',
+ 'I',
+ "'",
+ 'C',
+ 'I',
+ "'",
+ 'I',
+ "'",
+ "'",
+ 'C',
+ "'",
+ 'L',
+ 'O',
+ 'I',
+ "'",
+ 'G',
+ 'I',
+ "'",
+ "'",
+ 'C',
+ 'W',
+ 'O',
+ 'I',
+ "'",
+ 'T',
+ 'J',
+ 'O',
+ ',',
+ 'I',
+ "'",
+ '!',
+ 'O',
+ '<',
+ '=',
+ '!',
+ '[',
+ ']',
+ '(',
+ ')',
+ '?',
+ '[']
     
 ```
 
