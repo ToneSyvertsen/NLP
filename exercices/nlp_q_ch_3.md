@@ -299,7 +299,14 @@ Out[337]: [2009, 12, 31]
 
 a)A single determiner (assume that a, an, and the are the only determiners).
 
-I don't knoe what I'm suppose to do here but made two expressions one giving the words comming before and another the words coming after this determiners..
+I don't knoe what I'm suppose to do here but made three expressions one giving the words, and then two where the first with the word comming before and another the words coming after the determiners..
+
+determiners:
+```
+moby.findall(r" <a | an | the>")
+
+```
+
 
 before:
 
@@ -317,9 +324,25 @@ moby.findall(r" <a | an | the>(<.*>)")
 ```
 
 b)An arithmetic expression using integers, addition, and multiplication, such as 2*3+8.
+This was the best I could do.
+I'm not sure if they wanted the signs or the nubers that was before or after the signs..
 
-???
-Don't understand what I'm suppose to do here..
+```
+in[520]: 
+re.findall(r"(([0-9])['+', '-', '*', '/','=']([0-9]))",tall)
+Out[521]: 
+[('2+2', '2', '2'),
+ ('1=2', '1', '2'),
+ ('4*2', '4', '2'),
+ ('8*9', '8', '9'),
+ ('9+9', '9', '9'),
+ ('5+5', '5', '5'),
+ ('5=6', '5', '6'),
+ ('3=5', '3', '5'),
+ ('2/2', '2', '2')]
+
+```
+
 
 8. ☼ Write a utility function that takes a URL as its argument, and returns the contents of the URL, with all HTML markup removed. Use from urllib import request and then  request.urlopen('http://nltk.org/').read().decode('utf8') to access the contents of the URL.
 
