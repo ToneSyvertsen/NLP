@@ -999,7 +999,8 @@ print(result[2][1]*10)
 21. ◑ Write a function unknown() that takes a URL as its argument, and returns a list of unknown words that occur on that webpage. In order to do this, extract all substrings consisting of lowercase letters (using re.findall()) and remove any items from this set that occur in the Words Corpus (nltk.corpus.words). Try to categorize these words manually and discuss your findings.
 
 It seems like all words that not "stamwords" occur in the list.
-Allso this time I borrowed most of my function from walhbr: https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/21.py
+Allso this time I borrowed most of my function from walshbr: https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/21.py
+just added sorted and set to avoid dublets and getting them alfabetical. And for some reason spyder tells me to add "lxml"..
 ```
 def unknown(url):
     """Takes a URL as its argument and returns a list of unknown words that occur on that webpage."""
@@ -1020,6 +1021,34 @@ unknown('http://www.bbc.com/news/world-asia-41263147')
 ```
 
 22. ◑ Examine the results of processing the URL http://news.bbc.co.uk/ using the regular expressions suggested above. You will see that there is still a fair amount of non-textual data there, particularly Javascript commands. You may also find that sentence breaks have not been properly preserved. Define further regular expressions that improve the extraction of text from this web page.
+
+Thank you again @walshbr
+```
+def unknown(url):
+    """Takes a URL as its argument and returns a list of unknown words that occur on that webpage."""
+	# gets the text of the page
+    html = request.urlopen(url).read().decode('utf8')
+    
+    soup = BeautifulSoup(html, "lxml")
+    for script in soup.find_all('script'):	#not sure how I should know that there are a script function..
+            script.clear()
+    raw = soup.get_text()
+ 
+ 
+ 
+	# finds the lower case words by searching for a word boundary plus one or more lower case letters
+    lower_case_words = re.findall(r'\b[a-z]+', raw)
+    junk = set(words.words())
+	# searches through the list of lower case words and gets rid of those not in the words corpus.
+    unknowns = sorted(set([word for word in lower_case_words if word not in junk]))
+    print(unknowns)
+
+unknown('http://www.bbc.com/news/world-asia-41263147')
+['alerts', 'app', 'appears', 'arrived', 'asia', 'attacks', 'authorities', 'banks', 'bars', 'bbc', 'bbccom', 'beds', 'began', 'bodies', 'boys', 'buildings', 'caused', 'charred', 'children', 'choices', 'circulating', 'citing', 'com', 'concerns', 'couldn', 'counts', 'described', 'died', 'disasters', 'discusses', 'endangered', 'engines', 'escaping', 'families', 'feet', 'fires', 'flames', 'goodbye', 'grilles', 'gutted', 'hardline', 'having', 'heard', 'heels', 'hours', 'http', 'incidents', 'indicated', 'injuries', 'investigated', 'investigations', 'involving', 'killings', 'kills', 'lives', 'lumped', 'measures', 'members', 'minutes', 'monks', 'neighbour', 'online', 'operations', 'regulations', 'reported', 'revised', 'schools', 'screams', 'sharing', 'showed', 'sidesteps', 'sites', 'students', 'suffocated', 'sympathies', 'sympathise', 'tahfiz', 'teachers', 'tv', 'tweeted', 'victims', 'videos', 'wellbeing', 'windows', 'women', 'www', 'years']
+``` 
+
+
+I did also notice that,
 
 23. ◑ Are you able to write a regular expression to tokenize text in such a way that the word don't is tokenized into do and n't? Explain why this regular expression won't work: «n't|\w+».
 
