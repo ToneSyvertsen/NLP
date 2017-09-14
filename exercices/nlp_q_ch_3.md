@@ -783,7 +783,7 @@ raw.split('s')
 Out[568]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
 
 ```
-<font color="red">But what if I would like to keep the 's' caracter after the split? Is that a strange and un normal thing to do?</font>
+color.Red("But what if I would like to keep the 's' caracter after the split? Is that a strange and unnormal thing to do?")
 
 12. ☼ Write a for loop to print out the characters of a string, one per line.
 
