@@ -768,6 +768,23 @@ print(result)
 
 11. ☼ Define a string raw containing a sentence of your own choosing. Now, split raw on some character other than space, such as 's'.
 
+I found two ways of doing this:
+
+first way:
+``` 
+raw=('This is a string of my own choosing')
+re.split(r's', raw)
+Out[566]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
+``` 
+second way:
+```
+raw=('This is a string of my own choosing')
+raw.split('s')
+Out[568]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
+
+```
+<p style='color:red'>But what if I would like to keep the 's' caracter after the split? Is that a strange and un normal thing to do?</p>
+
 12. ☼ Write a for loop to print out the characters of a string, one per line.
 
 13. ☼ What is the difference between calling split on a string with no argument or with ' ' as the argument, e.g. sent.split() versus sent.split(' ')? What happens when the string being split contains tab characters, consecutive space characters, or a sequence of tabs and spaces? (In IDLE you will need to use '\t' to enter a tab character.)
