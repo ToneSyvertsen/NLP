@@ -969,6 +969,29 @@ print(wh_words)
 
 19. ◑ Create a file consisting of words and (made up) frequencies, where each line consists of a word, the space character, and a positive integer, e.g. fuzzy 53. Read the file into a Python list using open(filename).readlines(). Next, break each line into its two fields using split(), and convert the number into an integer using int(). The result should be a list of the form:  [['fuzzy', 53], ...].
 
+
+```
+list=open('q19.txt').readlines()
+list = [line.strip() for line in list]
+# splits the lines into their component pieces
+result = [line.split(' ') for line in list]
+result
+Out[666]: [['Tone', '21'], ['Berit', '25'], ['Christina', '11'], ['Christine', '33']]
+
+# converts the numbers to integers
+
+for item in result:
+	item[1] = int(item[1]) 
+
+
+# prints out a test case to prove that the numbers are numbers
+# and not strings
+# to see that its the entire list I will print the third line
+print(result[2][1]*10)
+110
+
+``` 
+
 20. ◑ Write code to access a favorite webpage and extract some text from it. For example, access a weather site and extract the forecast top temperature for your town or city today.
 
  [see my answere here](ex20chap3.md) 
