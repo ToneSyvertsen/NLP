@@ -756,6 +756,16 @@ b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following 
 >>> result
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
 
+once again I don't understand what I am suppose to do..
+found this answere, where the answere seems to be below each other and not on a line.. 
+
+```
+sent = ['The', 'dog', 'gave', 'John', 'the', 'newspaper']
+result = [(word, len(word)) for word in sent]
+print(result)
+
+```
+
 11. ☼ Define a string raw containing a sentence of your own choosing. Now, split raw on some character other than space, such as 's'.
 
 12. ☼ Write a for loop to print out the characters of a string, one per line.
