@@ -942,6 +942,14 @@ Out[598]: 'Monty Python'
 17. ☼ What happens when the formatting strings %6s and %-6s are used to display strings that are longer than six characters?
  
  ???once again, don't get this? how do I use %6s in python, can not find any examples???
+ 
+ only thing I can use %s for is this: 
+ 
+ ``` 
+ "Hello %s%s, my name is %s" % ('john', 'son', 'mike')
+Out[612]: 'Hello johnson, my name is mike'
+ 
+ ``` 
 
 
 18. ◑ Read in some text from a corpus, tokenize it, and print the list of all wh-word types that occur. (wh-words in English are used in questions, relative clauses and exclamations: who, which, what, and so on.) Print them in order. Are any words duplicated in this list, because of the presence of case distinctions or punctuation?
