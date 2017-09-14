@@ -746,7 +746,7 @@ Out[561]:
 
 ```
 
-b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.this was a lot of word see https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/9.py
+b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.this was a lot of word see https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/9.py (forked from walsbr)
 
 10. ☼ Rewrite the following loop as a list comprehension:
 
@@ -997,6 +997,27 @@ print(result[2][1]*10)
  [see my answere here](ex20chap3.md) 
 
 21. ◑ Write a function unknown() that takes a URL as its argument, and returns a list of unknown words that occur on that webpage. In order to do this, extract all substrings consisting of lowercase letters (using re.findall()) and remove any items from this set that occur in the Words Corpus (nltk.corpus.words). Try to categorize these words manually and discuss your findings.
+
+It seems like all words that not "stamwords" occur in the list.
+Allso this time I borrowed most of my function from walhbr: https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/21.py
+```
+def unknown(url):
+    """Takes a URL as its argument and returns a list of unknown words that occur on that webpage."""
+	# gets the text of the page
+    html = request.urlopen(url).read().decode('utf8')
+    raw = BeautifulSoup(html, "lxml").get_text()
+    junk = set(words.words())
+	# finds the lower case words by searching for a word boundary plus one or more lower case letters
+    lower_case_words = re.findall(r'\b[a-z]+', raw)
+ 
+	# searches through the list of lower case words and gets rid of those not in the words corpus.
+    unknowns = sorted(set([word for word in lower_case_words if word not in junk]))
+    print(unknowns)
+
+unknown('http://www.bbc.com/news/world-asia-41263147')
+['adding', 'adexpert', 'admin', 'adpolicy', 'ads', 'adsense', 'adsportapp', 'adverts', 'alerts', 'amp', 'ap', 'api', 'app', 'appears', 'arguments', 'arrived', 'asia', 'async', 'authorities', 'autocapitalize', 'autocomplete', 'autocorrect', 'banks', 'barlesque', 'bars', 'bbbccookies', 'bbc', 'bbccom', 'bbccookies', 'bbcdotcom', 'bbci', 'bbcnewsperformance', 'bbcredirection', 'bbcsr', 'bbcsurvey', 'bbctravel', 'bckns', 'beds', 'beforeunload', 'began', 'bitrate', 'blogs', 'blq', 'bodies', 'boomr', 'boys', 'buildings', 'byline', 'callback', 'candyplatform', 'caused', 'cb', 'cbbc', 'cbeebies', 'cdn', 'cedexis', 'changing', 'channelpagecandyid', 'charred', 'charset', 'chartbeat', 'checksum', 'children', 'choices', 'circulating', 'citing', 'ck', 'ckad', 'ckns', 'ckpf', 'ckps', 'cmd', 'cms', 'co', 'com', 'comments', 'compiled', 'components', 'comscore', 'concat', 'concerns', 'conf', 'config', 'contains', 'contentloaded', 'contexts', 'cookie', 'cookies', 'correspondents', 'couldn', 'counts', 'cps', 'css', 'cssp', 'cta', 'ctm', 'cuts', 'dd', 'debug', 'deleted', 'described', 'deserialisation', 'deserialise', 'df', 'died', 'diego', 'dir', 'disasters', 'disco', 'discusses', 'dist'[...]
+
+```
 
 22. ◑ Examine the results of processing the URL http://news.bbc.co.uk/ using the regular expressions suggested above. You will see that there is still a fair amount of non-textual data there, particularly Javascript commands. You may also find that sentence breaks have not been properly preserved. Define further regular expressions that improve the extraction of text from this web page.
 
