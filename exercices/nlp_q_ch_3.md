@@ -923,6 +923,22 @@ Out[593]: 21
 >>> monty
 This time, Python should return with a value. You can also try import prog, in which case Python should be able to evaluate the expression prog.monty at the prompt.
 
+```
+monty
+Traceback (most recent call last):
+
+  File "<ipython-input-597-52f992b77e65>", line 1, in <module>
+    monty
+
+NameError: name 'monty' is not defined
+
+
+from prog import monty
+monty
+Out[598]: 'Monty Python'
+
+```
+
 17. ☼ What happens when the formatting strings %6s and %-6s are used to display strings that are longer than six characters?
 
 18. ◑ Read in some text from a corpus, tokenize it, and print the list of all wh-word types that occur. (wh-words in English are used in questions, relative clauses and exclamations: who, which, what, and so on.) Print them in order. Are any words duplicated in this list, because of the presence of case distinctions or punctuation?
