@@ -299,7 +299,7 @@ Out[337]: [2009, 12, 31]
 
 a)A single determiner (assume that a, an, and the are the only determiners).
 
-I don't knoe what I'm suppose to do here but made three expressions one giving the words, and then two where the first with the word comming before and another the words coming after the determiners..
+I don't know what I'm suppose to do here but made three expressions one giving the words, and then two where the first with the word comming before and another the words coming after the determiners..
 
 determiners:
 ```
@@ -324,8 +324,10 @@ moby.findall(r" <a | an | the>(<.*>)")
 ```
 
 b)An arithmetic expression using integers, addition, and multiplication, such as 2*3+8.
+
 This was the best I could do.
 I'm not sure if they wanted the signs or the nubers that was before or after the signs..
+???how would you do it???
 
 ```
 in[520]: 
@@ -416,7 +418,8 @@ Oh|/<=![]()?/&[
 ```
 
 a)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the various kinds of punctuation in this text. Use one multi-line regular expression, with inline comments, using the verbose flag (?x).
-I don't get it to work properly, why do all the capital letters join? If I write an expression to get them away all other letters and spaces get included in the list :P
+
+???I don't get it to work properly, why do all the capital letters join? If I write an expression to get them away all other letters and spaces get included in the list :P???
 
 ```
 girl= load('just_a_girl.txt')
@@ -515,7 +518,7 @@ Out[555]:
  '[']
     
 ```
-or this I get the \n and spaces
+???or this I get the \n and spaces???
 
 ```
 girl= load('just_a_girl.txt')
@@ -743,7 +746,7 @@ Out[561]:
 
 ```
 
-b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.
+b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following kinds of expression: monetary amounts; dates; names of people and organizations.this was a lot of word see https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/9.py
 
 10. ☼ Rewrite the following loop as a list comprehension:
 
@@ -756,8 +759,8 @@ b)Use nltk.regexp_tokenize() to create a tokenizer that tokenizes the following 
 >>> result
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
 
-once again I don't understand what I am suppose to do..
-found this answere, where the answere seems to be below each other and not on a line.. 
+???once again I don't understand what I am suppose to do..
+found this answere, where the answere seems to be below each other and not on a line.. ???
 
 ```
 sent = ['The', 'dog', 'gave', 'John', 'the', 'newspaper']
@@ -783,7 +786,7 @@ raw.split('s')
 Out[568]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
 
 ```
-color.Red("But what if I would like to keep the 's' caracter after the split? Is that a strange and unnormal thing to do?")
+???But what if I would like to keep the 's' caracter after the split? Is that a strange and abnormal thing to do???
 
 12. ☼ Write a for loop to print out the characters of a string, one per line.
 
