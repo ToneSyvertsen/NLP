@@ -783,7 +783,7 @@ raw.split('s')
 Out[568]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
 
 ```
-<p style='color:red'>But what if I would like to keep the 's' caracter after the split? Is that a strange and un normal thing to do?</p>
+<font color="red">But what if I would like to keep the 's' caracter after the split? Is that a strange and un normal thing to do?</font>
 
 12. ☼ Write a for loop to print out the characters of a string, one per line.
 
