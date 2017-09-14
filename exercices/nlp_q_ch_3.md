@@ -1022,6 +1022,7 @@ unknown('http://www.bbc.com/news/world-asia-41263147')
 
 22. ◑ Examine the results of processing the URL http://news.bbc.co.uk/ using the regular expressions suggested above. You will see that there is still a fair amount of non-textual data there, particularly Javascript commands. You may also find that sentence breaks have not been properly preserved. Define further regular expressions that improve the extraction of text from this web page.
 
+I did also notice that, but could not find any answeres in the book..
 Thank you again @walshbr
 ```
 def unknown(url):
@@ -1046,9 +1047,6 @@ def unknown(url):
 unknown('http://www.bbc.com/news/world-asia-41263147')
 ['alerts', 'app', 'appears', 'arrived', 'asia', 'attacks', 'authorities', 'banks', 'bars', 'bbc', 'bbccom', 'beds', 'began', 'bodies', 'boys', 'buildings', 'caused', 'charred', 'children', 'choices', 'circulating', 'citing', 'com', 'concerns', 'couldn', 'counts', 'described', 'died', 'disasters', 'discusses', 'endangered', 'engines', 'escaping', 'families', 'feet', 'fires', 'flames', 'goodbye', 'grilles', 'gutted', 'hardline', 'having', 'heard', 'heels', 'hours', 'http', 'incidents', 'indicated', 'injuries', 'investigated', 'investigations', 'involving', 'killings', 'kills', 'lives', 'lumped', 'measures', 'members', 'minutes', 'monks', 'neighbour', 'online', 'operations', 'regulations', 'reported', 'revised', 'schools', 'screams', 'sharing', 'showed', 'sidesteps', 'sites', 'students', 'suffocated', 'sympathies', 'sympathise', 'tahfiz', 'teachers', 'tv', 'tweeted', 'victims', 'videos', 'wellbeing', 'windows', 'women', 'www', 'years']
 ``` 
-
-
-I did also notice that,
 
 23. ◑ Are you able to write a regular expression to tokenize text in such a way that the word don't is tokenized into do and n't? Explain why this regular expression won't work: «n't|\w+».
 
