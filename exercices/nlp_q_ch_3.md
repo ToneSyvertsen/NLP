@@ -906,6 +906,16 @@ Out[592]:
 
 15. ☼ Explore the difference between strings and integers by typing the following at a Python prompt: "3" * 7 and 3 * 7. Try converting between strings and integers using int("3") and str(3).
 
+???I do not now what they want me to do here..???
+Yes I can se that by putting the number 3 into a quotes makes it a part of a sting and not considered as an integer.
+
+```
+"3" * 7 and 3 * 7
+Out[593]: 21
+
+```
+
+
 16. ☼ Use a text editor to create a file called prog.py containing the single line monty = 'Monty Python'. Next, start up a new session with the Python interpreter, and enter the expression monty at the prompt. You will get an error from the interpreter. Now, try the following (note that you have to leave off the .py part of the filename):
 
  	
