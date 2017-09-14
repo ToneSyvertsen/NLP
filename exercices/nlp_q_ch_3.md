@@ -790,6 +790,48 @@ Out[568]: ['Thi', ' i', ' a ', 'tring of my own choo', 'ing']
 
 12. ☼ Write a for loop to print out the characters of a string, one per line.
 
+```
+raw=('This is a string of my own choosing')
+[char for (char) in raw]
+Out[574]: 
+['T',
+ 'h',
+ 'i',
+ 's',
+ ' ',
+ 'i',
+ 's',
+ ' ',
+ 'a',
+ ' ',
+ 's',
+ 't',
+ 'r',
+ 'i',
+ 'n',
+ 'g',
+ ' ',
+ 'o',
+ 'f',
+ ' ',
+ 'm',
+ 'y',
+ ' ',
+ 'o',
+ 'w',
+ 'n',
+ ' ',
+ 'c',
+ 'h',
+ 'o',
+ 'o',
+ 's',
+ 'i',
+ 'n',
+ 'g']
+ 
+```
+
 13. ☼ What is the difference between calling split on a string with no argument or with ' ' as the argument, e.g. sent.split() versus sent.split(' ')? What happens when the string being split contains tab characters, consecutive space characters, or a sequence of tabs and spaces? (In IDLE you will need to use '\t' to enter a tab character.)
 
 14. ☼ Create a variable words containing a list of words. Experiment with words.sort() and sorted(words). What is the difference?
