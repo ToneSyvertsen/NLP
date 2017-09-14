@@ -834,6 +834,24 @@ Out[574]:
 
 13. ☼ What is the difference between calling split on a string with no argument or with ' ' as the argument, e.g. sent.split() versus sent.split(' ')? What happens when the string being split contains tab characters, consecutive space characters, or a sequence of tabs and spaces? (In IDLE you will need to use '\t' to enter a tab character.)
 
+To see the differens I add a tab in the sentence:
+
+``` 
+raw=('This is a     string of my own choosing')
+
+```
+With no argument it only looks for spaces, adding a space it showes the empty places from tab.
+
+```
+raw.split()
+Out[579]: ['This', 'is', 'a', 'string', 'of', 'my', 'own', 'choosing']
+raw.split(' ')
+Out[580]: ['This', 'is', 'a', '', '', '', '', 'string', 'of', 'my', 'own', 'choosing']
+
+```
+
+
+
 14. ☼ Create a variable words containing a list of words. Experiment with words.sort() and sorted(words). What is the difference?
 
 15. ☼ Explore the difference between strings and integers by typing the following at a Python prompt: "3" * 7 and 3 * 7. Try converting between strings and integers using int("3") and str(3).
