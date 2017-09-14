@@ -854,6 +854,56 @@ Out[580]: ['This', 'is', 'a', '', '', '', '', 'string', 'of', 'my', 'own', 'choo
 
 14. ☼ Create a variable words containing a list of words. Experiment with words.sort() and sorted(words). What is the difference?
 
+The first one require printouts, but shows the words without markings..
+
+
+```
+words = ['I', 'really', 'have', 'no', 'fantasy',',', 'so', 'have', 'no', 'idea', 'what', 'to', 'write', 'here', '!?!']
+
+words.sort()
+print("The sorted words are:")
+for word in words:
+   print(word)
+The sorted words are:
+!?!
+,
+I
+fantasy
+have
+have
+here
+idea
+no
+no
+really
+so
+to
+what
+write
+
+
+words = ['I', 'really', 'have', 'no', 'fantasy',',', 'so', 'have', 'no', 'idea', 'what', 'to', 'write', 'here', '!?!']
+
+sorted(words)
+Out[592]: 
+['!?!',
+ ',',
+ 'I',
+ 'fantasy',
+ 'have',
+ 'have',
+ 'here',
+ 'idea',
+ 'no',
+ 'no',
+ 'really',
+ 'so',
+ 'to',
+ 'what',
+ 'write']
+
+``` 
+
 15. ☼ Explore the difference between strings and integers by typing the following at a Python prompt: "3" * 7 and 3 * 7. Try converting between strings and integers using int("3") and str(3).
 
 16. ☼ Use a text editor to create a file called prog.py containing the single line monty = 'Monty Python'. Next, start up a new session with the Python interpreter, and enter the expression monty at the prompt. You will get an error from the interpreter. Now, try the following (note that you have to leave off the .py part of the filename):
