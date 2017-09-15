@@ -19,13 +19,72 @@ Out[810]: 3142930641582938830174357788501626427282669988762475256374173175398995
 3. ☼ The Python multiplication operation can be applied to lists. What happens when you type ['Monty', 'Python'] * 20, or 3 * sent1?
 
 ```
+['Monty', 'Python'] * 6
+Out[816]: 
+['Monty',
+ 'Python',
+ 'Monty',
+ 'Python',
+ 'Monty',
+ 'Python',
+ 'Monty',
+ 'Python',
+ 'Monty',
+ 'Python',
+ 'Monty',
+ 'Python'
+]
+ 
+```
+
+```
+sent1 ='Hello'
+3 * sent1
+Out[817]: 'HelloHelloHello'
 
 ```
 4. ☼ Review 1 on computing with language. How many words are there in text2? How many distinct words are there?
 
+All words
+``` 
+len(text2)
+Out[820]: 141576
+
+```
+Distinct words
+
+```
+len(set(text2))
+Out[821]: 6833
+
+```
+
 5. ☼ Compare the lexical diversity scores for humor and romance fiction in 1.1. Which genre is more lexically diverse?
 
+```
+def lexical_diversity(text):
+    return len(set(text)) / len(text)
+
+from nltk.corpus import brown
+brown.categories()
+
+lexical_diversity(brown.words(categories='humor'))
+Out[829]: 0.23125144042406084
+
+lexical_diversity(brown.words(categories='romance'))
+Out[830]: 0.12070492131044529
+
+```
+The text in humor seems to have the highest lexical_diversity, this can be because it's a smaller text but also that the author have used a wider vocabulary.
+
 6. ☼ Produce a dispersion plot of the four main protagonists in Sense and Sensibility: Elinor, Marianne, Edward, and Willoughby. What can you observe about the different roles played by the males and females in this novel? Can you identify the couples?
+
+```
+text2.dispersion_plot(["Elinor", "Marianne", "Edward", "Willoughby"])
+
+```
+![text2.dispersion_plot](https://puu.sh/xAGuv/bf18d0f060.png)
+
 
 7. ☼ Find the collocations in text5.
 
