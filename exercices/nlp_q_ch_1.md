@@ -237,6 +237,40 @@ Out[850]:
 
 15. ☼ Review the discussion of conditionals in 4. Find all words in the Chat Corpus (text5) starting with the letter b. Show them in alphabetical order.
 
+```
+sorted(w for w in set(text5) if w.startswith('b'))
+Out[851]: 
+['b',
+ 'b-day',
+ 'b/c',
+ 'b4',
+ 'babay',
+ 'babble',
+ 'babblein',
+ 'babe',
+ 'babes',
+ 'babi',
+ 'babies',
+ 'babiess',
+ 'baby',
+ ...]
+ 
+```
+
 
 
 16. ☼ Type the expression list(range(10)) at the interpreter prompt. Now try list(range(10, 20)), list(range(10, 20, 2)), and list(range(20, 10, -2)). We will see a variety of uses for this built-in function in later chapters.
+
+For some reason this don't work in spyder..
+
+```
+>>> list(range(10))                                      
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list(range(10, 20))
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>> list(range(10, 20, 2))
+[10, 12, 14, 16, 18]
+>>> list(range(20, 10, -2))
+[20, 18, 16, 14, 12]
+
+```
