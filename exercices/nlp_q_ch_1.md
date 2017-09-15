@@ -110,6 +110,33 @@ If you don’t use len in the expression all the words will appear instead of th
 Define a string and assign it to a variable, e.g., my_string = 'My String' (but put something more interesting in the string). Print the contents of this variable in two ways, first by simply typing the variable name and pressing enter, then by using the print statement.
 Try adding the string to itself using my_string + my_string, or multiplying it by a number, e.g., my_string * 3. Notice that the strings are joined together without any spaces. How could you fix this?
 
+```
+my_string='Hello there!'
+my_string
+Out[834]: 'Hello there!'
+print(my_string)
+Hello there!
+
+```
+
+```
+my_string + my_string
+Out[836]: 'Hello there!Hello there!'
+my_string * 3
+Out[837]: 'Hello there!Hello there!Hello there!
+
+```
+
+```
+my_string + ' ' + my_string
+Out[838]: 'Hello there! Hello there!'
+
+
+(my_string + ' ') * 3
+Out[839]: 'Hello there! Hello there! Hello there! '
+
+```
+
 10. ☼ Define a variable my_sent to be a list of words, using the syntax my_sent = ["My", "sent"] (but with your own words, or a favorite saying).
 
 Use ' '.join(my_sent) to convert this into a string.
