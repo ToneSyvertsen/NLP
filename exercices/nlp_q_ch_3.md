@@ -1050,6 +1050,37 @@ unknown('http://www.bbc.com/news/world-asia-41263147')
 
 23. ◑ Are you able to write a regular expression to tokenize text in such a way that the word don't is tokenized into do and n't? Explain why this regular expression won't work: «n't|\w+».
 
+By using «n't|\w+» you will collect all words with this ending and as a single quote.
+
+```
+import nltk
+from nltk import word_tokenize
+import re
+
+#	reads in a text
+f = open('just_a_girl.txt')
+raw = f.read()
+
+
+word = re.findall(r'\b(do)(n\'t)', raw)
+print(word)
+[('do', "n't"), ('do', "n't")]
+
+```
+
+I once again struggeled an made everything more complicaded, so ended up beeing inspired for @walshbr
+To see that I understand the funktion I tried with another word i'm too.
+
+```
+f = open('just_a_girl.txt')
+raw = f.read()
+
+
+word = re.findall(r'\b(I)(\'m)', raw)
+print(word)
+[('I', "'m"), ('I', "'m"), ('I', "'m"), ('I', "'m"), ('I', "'m"), ('I', "'m"), ('I', "'m")]
+```
+
 24. ◑ Try to write code to convert text into hAck3r, using regular expressions and substitution, where e → 3, i → 1, o → 0, l → |, s → 5, . → 5w33t!, ate → 8. Normalize the text to lowercase before converting it. Add more substitutions of your own. Now try to map s to two different values: $ for word-initial s, and 5 for word-internal s.
 
 25. ◑ Pig Latin is a simple transformation of English text. Each word of the text is converted as follows: move any consonant (or consonant cluster) that appears at the start of the word to the end, then append ay, e.g. string → ingstray, idle → idleay.  http://en.wikipedia.org/wiki/Pig_Latin
