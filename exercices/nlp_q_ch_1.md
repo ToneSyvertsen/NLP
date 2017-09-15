@@ -192,10 +192,51 @@ I believe it gives the same result, but will be easier when you are connecting a
 "Monty Python"[6:12]
 ["Monty", "Python"][1]
 
+```
+"Monty Python"[6:12]
+Out[846]: 'Python'
+
+["Monty", "Python"][1]
+Out[847]: 'Python'
+
+```
+That will depend on what type of analysis you are doing.
+Sometimes it's best to use list other times strings?
+
 13. ☼ We have seen how to represent a sentence as a list of words, where each word is a sequence of characters. What does sent1[2][2] do? Why? Experiment with other index values.
+
+```
+sent1
+Out[847]: ['Call', 'me', 'Ishmael', '.']
+
+sent1[2][2]
+Out[848]: 'h'
+```
+It takes the third letter from the third word. Number three because the indexes start at 0.
+
 
 14. ☼ The first sentence of text3 is provided to you in the variable sent3. The index of the in sent3 is 1, because sent3[1] gives us 'the'. What are the indexes of the two other occurrences of this word in sent3?
 
+
+```
+sent3
+Out[850]: 
+['In',
+ 'the', #index 1
+ 'beginning',
+ 'God',
+ 'created',
+ 'the', #index 5
+ 'heaven',
+ 'and',
+ 'the', #index 8
+ 'earth',
+ '.']
+
+```
+
 15. ☼ Review the discussion of conditionals in 4. Find all words in the Chat Corpus (text5) starting with the letter b. Show them in alphabetical order.
+
+
 
 16. ☼ Type the expression list(range(10)) at the interpreter prompt. Now try list(range(10, 20)), list(range(10, 20, 2)), and list(range(20, 10, -2)). We will see a variety of uses for this built-in function in later chapters.
