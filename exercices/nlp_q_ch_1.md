@@ -1,12 +1,26 @@
 
 Exercises
 
-1.☼ Try using the Python interpreter as a calculator, and typing expressions like 12 / (4 + 1).
+1. ☼ Try using the Python interpreter as a calculator, and typing expressions like 12 / (4 + 1).
+``` 
+12 / (4+1)
+Out[811]: 2.4
+
+``` 
 
 2. ☼ Given an alphabet of 26 letters, there are 26 to the power 10, or 26 ** 10, ten-letter strings we can form. That works out to 141167095653376. How many hundred-letter strings are possible?
 
+``` 
+26**100
+Out[810]: 3142930641582938830174357788501626427282669988762475256374173175398995908420104023465432599069702289330964075081611719197835869803511992549376
+
+``` 
+
 3. ☼ The Python multiplication operation can be applied to lists. What happens when you type ['Monty', 'Python'] * 20, or 3 * sent1?
 
+```
+
+```
 4. ☼ Review 1 on computing with language. How many words are there in text2? How many distinct words are there?
 
 5. ☼ Compare the lexical diversity scores for humor and romance fiction in 1.1. Which genre is more lexically diverse?
