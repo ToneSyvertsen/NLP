@@ -102,7 +102,7 @@ Player; Player 12%; dont know; lez gurls; long time
 
 8. ☼ Consider the following Python expression: len(set(text4)). State the purpose of this expression. Describe the two steps involved in performing this computation.
 
-_len_ count the words in text 4, then _set_ take away all the duplicates and you get a number of distinct words in text 4.
+**len** count the words in text 4, then **set** take away all the duplicates and you get a number of distinct words in text 4.
 If you don’t use len in the expression all the words will appear instead of the count
 
 9. ☼ Review 2 on lists and strings.
