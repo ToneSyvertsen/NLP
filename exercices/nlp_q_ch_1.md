@@ -139,10 +139,53 @@ Out[839]: 'Hello there! Hello there! Hello there! '
 
 10. ☼ Define a variable my_sent to be a list of words, using the syntax my_sent = ["My", "sent"] (but with your own words, or a favorite saying).
 
+```
+my_sent= ["Æ", "æ", "a", "å",  "edår"]
+my_sent
+Out[841]: ['Æ', 'æ', 'a', 'å', 'edår']
+
+```
+
 Use ' '.join(my_sent) to convert this into a string.
+```
+' '.join(my_sent)
+Out[842]: 'Æ æ a å edår'
+
+```
+
 Use split() to split the string back into the list form you had to start with.
 
+```
+'Æ æ a å EDÅR'.split()
+Out[845]: ['Æ', 'æ', 'a', 'å', 'EDÅR']
+
+```
+
 11. ☼ Define several variables containing lists of words, e.g., phrase1, phrase2, and so on. Join them together in various combinations (using the plus operator) to form whole sentences. What is the relationship between len(phrase1 + phrase2) and len(phrase1) + len(phrase2)?
+
+```
+As string
+>>> phrase1=['the sun is allways shining']
+>>> phrase2=['on mondays']
+ 
+>>> phrase1 + phrase2
+['the sun is allways shining', 'on mondays']
+>>> phrase2 + phrase1
+['on mondays', 'the sun is allways shining']
+ 
+As list
+>>> phrase1 + phrase2
+['the', 'sun', 'is', 'allways', 'shining', 'on', 'mondays']
+>>> phrase2 + phrase1
+['on', 'mondays', 'the', 'sun', 'is', 'allways', 'shining']
+ 
+>>> len(phrase1) + len(phrase2)
+7
+>>> len(phrase1 + phrase2)
+7
+
+```
+I believe it gives the same result, but will be easier when you are connecting a lot of lists/strings?
 
 12. ☼ Consider the following two expressions, which have the same value. Which one will typically be more relevant in NLP? Why?
 
