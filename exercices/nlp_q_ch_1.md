@@ -85,10 +85,25 @@ text2.dispersion_plot(["Elinor", "Marianne", "Edward", "Willoughby"])
 ```
 ![text2.dispersion_plot](https://puu.sh/xAGuv/bf18d0f060.png)
 
+I do believe Elinor is the main character and that she has a good friend, Marianne.
+Based on those compared to when the men appears I would guess Elinor + Edward and Marianne + Willoughby J
+
 
 7. ☼ Find the collocations in text5.
 
+``` 
+text5.collocations()
+wanna chat; PART JOIN; MODE #14-19teens; JOIN PART; PART PART;
+cute.-ass MP3; MP3 player; JOIN JOIN; times .. .; ACTION watches; guys
+wanna; song lasts; last night; ACTION sits; -...)...- S.M.R.; Lime
+Player; Player 12%; dont know; lez gurls; long time
+
+```
+
 8. ☼ Consider the following Python expression: len(set(text4)). State the purpose of this expression. Describe the two steps involved in performing this computation.
+
+_len_ count the words in text 4, then _set_ take away all the duplicates and you get a number of distinct words in text 4.
+If you don’t use len in the expression all the words will appear instead of the count
 
 9. ☼ Review 2 on lists and strings.
 
