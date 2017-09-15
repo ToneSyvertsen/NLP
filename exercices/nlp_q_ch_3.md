@@ -1083,6 +1083,8 @@ print(word)
 
 24. ◑ Try to write code to convert text into hAck3r, using regular expressions and substitution, where e → 3, i → 1, o → 0, l → |, s → 5, . → 5w33t!, ate → 8. Normalize the text to lowercase before converting it. Add more substitutions of your own. Now try to map s to two different values: $ for word-initial s, and 5 for word-internal s.
 
+This was way to complex for mye see @walshbr 's answer https://github.com/ToneSyvertsen/nltk/blob/master/ch_three/24.py
+
 25. ◑ Pig Latin is a simple transformation of English text. Each word of the text is converted as follows: move any consonant (or consonant cluster) that appears at the start of the word to the end, then append ay, e.g. string → ingstray, idle → idleay.  http://en.wikipedia.org/wiki/Pig_Latin
 
 Write a function to convert a word to Pig Latin.
