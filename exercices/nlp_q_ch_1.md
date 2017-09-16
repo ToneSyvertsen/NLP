@@ -718,3 +718,64 @@ percent('it',text1)
 ```
 
 29. ◑ We have been using sets to store vocabularies. Try the following Python expression: set(sent3) < set(text1). Experiment with this using different arguments to set(). What does it do? Can you think of a practical application for this?
+
+
+```
+set(sent4) < set(text2)
+Out[64]: False
+
+set(sent3) < set(text1)
+Out[65]: True
+
+```
+hmmm
+
+```
+(sent3)
+Out[83]: 
+['In',
+ 'the',
+ 'beginning',
+ 'God',
+ 'created',
+ 'the',
+ 'heaven',
+ 'and',
+ 'the',
+ 'earth',
+ '.']
+
+text1.concordance('beginning')
+Displaying 19 of 19 matches:
+tle more in my shirt sleeves . But beginning to feel very cold now , half undre
+d listen to me ." I then went on , beginning with the rise and progress of the 
+hance caught sight of him ; in the beginning of the thing they had every one of
+ malignity which has been from the beginning ; to whose dominion even the moder
+ sailed from Nantucket at the very beginning of the Season - on - the - Line . 
+famous Discovery Expedition in the beginning of the present century . Captain L
+cise agency in the matter from the beginning . For me , I silently recalled the
+subjected ; but as most seamen are beginning to learn , tar in general by no me
+en indispensable to Vishnoo before beginning the creation , and which therefore
+d fighting around them . Stubb was beginning to look disappointed , especially 
+rs was the low hum of sails , just beginning to shake in the wind ; I thought m
+, as though now for the first time beginning to interpret for himself in some m
+thing presently . So , so ; he ' s beginning ." " I see nothing here , but a ro
+te history of whales , in the very beginning of his work ( page 3 ), sets down 
+ght sight of Stubb ' s face slowly beginning to glimmer into sight . Glancing u
+gotten ; certainly knowest not thy beginning , hence callest thyself unbegun . 
+thing that regularly begins at the beginning , and is at the middle when midway
+ an end in the middle , and at the beginning at the end . It ' s the old woman 
+man ' s head . Meantime , from the beginning all this had been descried from th
+
+```
+Was not able to find an exact match, but then I saw that while using set, the word dont have the same order, 
+so then it's just wether or not the words in sent3 occours in text1.
+
+```
+set(sent3)
+Out[84]: {'.', 'God', 'In', 'and', 'beginning', 'created', 'earth', 'heaven', 'the'}
+
+```
+After wondering for a long time I had to google it :P
+Turns out that the expressing asks if the sent is a subset of a the other text.
+I guess you can use this to look for expressions in different types of text and make a if statement for what to do if this sentence occur?
