@@ -652,3 +652,24 @@ Out[22]:
 [...]
  
  ```
+ 
+ 25. ◑ Define sent to be the list of words ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']. Now write code to perform the following tasks:
+ ```
+s_list= ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']
+
+ ```
+ a. Print all words beginning with sh
+ 
+ ``` 
+ print([w for w in s_list if w.startswith('sh')])
+['she', 'shells', 'shore']
+
+ ```
+ 
+ b. Print all words longer than four characters
+ 
+ ``` 
+ print([w for w in s_list if len(w) > 4])
+['sells', 'shells', 'shore']
+
+ ```
