@@ -778,4 +778,4 @@ Out[84]: {'.', 'God', 'In', 'and', 'beginning', 'created', 'earth', 'heaven', 't
 ```
 After wondering for a long time I had to google it :P
 Turns out that the expressing asks if the sent is a subset of a the other text.
-I guess you can use this to look for expressions in different types of text and make a if statement for what to do if this sentence occur?
+I guess you can use this to look for expressions in different types of text and make a if statement for what to do if all this words occur in a text?
