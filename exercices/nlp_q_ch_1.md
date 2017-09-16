@@ -1,5 +1,5 @@
 
-Exercises
+***Exercises chapter 1***
 
 1. ☼ Try using the Python interpreter as a calculator, and typing expressions like 12 / (4 + 1).
 ``` 
