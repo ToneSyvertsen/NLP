@@ -380,3 +380,108 @@ Out[863]:
  '.']
  
  ```
+
+18. ◑ Using list addition, and the set and sorted operations, compute the vocabulary of the sentences sent1 ... sent8.
+
+```
+#collects the sentences
+allsents=(sent1 + sent2 + sent3 + sent4 + sent5 + sent6 + sent7 + sent8) 
+
+#Sort all the words, fint only distinct words and then sort out the non alphabetic tokens
+Words=sorted(wd for wd in set(allsents) if wd.isalpha())                 
+
+Words
+Out[871]: 
+['ARTHUR',
+ 'Call',
+ 'Citizens',
+ 'Dashwood',
+ 'Fellow',
+ 'God',
+ 'House',
+ 'I',
+ 'In',
+ 'Ishmael',
+ 'JOIN',
+ 'KING',
+ 'MALE',
+ 'PMing',
+ 'Pierre',
+ 'Representatives',
+ 'SCENE',
+ 'SEXY',
+ 'Senate',
+ 'Sussex',
+ 'The',
+ 'Vinken',
+ 'Whoa',
+ 'a',
+ 'and',
+ 'as',
+ 'attrac',
+ 'been',
+ 'beginning',
+ 'board',
+ 'clop',
+ 'created',
+ 'director',
+ 'discreet',
+ 'earth',
+ 'encounters',
+ 'family',
+ 'for',
+ 'had',
+ 'have',
+ 'heaven',
+ 'in',
+ 'join',
+ 'lady',
+ 'lol',
+ 'long',
+ 'me',
+ 'nonexecutive',
+ 'of',
+ 'old',
+ 'older',
+ 'people',
+ 'problem',
+ 'seeks',
+ 'settled',
+ 'single',
+ 'the',
+ 'there',
+ 'to',
+ 'will',
+ 'wind',
+ 'with',
+ 'years']
+
+```
+
+
+19. ◑ What is the difference between the following two lines? Which one will give a larger value? Will this be the case for other texts?
+
+```
+
+>>> sorted(set(w.lower() for w in text1))
+>>> sorted(w.lower() for w in set(text1))
+
+```
+
+The second one gives som duplicates, but i can not tell why. 
+??? Do you know why @katekuzmina or @ausken ???
+
+20. ◑ What is the difference between the following two tests: w.isupper() and not w.islower()?
+```
+sentq='This is a TEST! Can I tell the difference?'
+
+#This argument allso include other tokens as long as they are not lower.
+sorted(w for w in set(sentq) if not w.islower())
+Out[897]: [' ', '!', '?', 'C', 'E', 'I', 'S', 'T']
+
+#This argument only returns the upper letters
+sorted(w for w in set(sentq) if w.isupper())
+Out[898]: ['C', 'E', 'I', 'S', 'T']
+
+```
+
