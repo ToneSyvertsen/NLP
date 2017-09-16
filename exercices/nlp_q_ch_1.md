@@ -673,3 +673,31 @@ s_list= ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']
 ['sells', 'shells', 'shore']
 
  ```
+
+26. ◑ What does the following Python code do?  sum(len(w) for w in text1) Can you use it to work out the average word length of a text?
+
+It counts all tokens in the text
+
+```
+sum(len(w) for w in text1)
+Out[28]: 999044
+
+```
+```
+alltokens= sum(len(w) for w in text1)
+allwords=len(text1)
+
+alltokens/allwords
+Out[41]: 3.830411128023649
+
+```
+or 
+
+```
+print(sum(len(w) for w in text1)/len(text1))
+3.830411128023649
+
+```
+
+
+
