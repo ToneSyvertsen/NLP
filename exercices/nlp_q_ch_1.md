@@ -699,5 +699,22 @@ print(sum(len(w) for w in text1)/len(text1))
 
 ```
 
+27. ◑ Define a function called vocab_size(text) that has a single parameter for the text, and which returns the vocabulary size of the text.
 
+```
+def vocab_size(text):
+    print(len(text))
+    
+```
+28. ◑ Define a function percent(word, text) that calculates how often a given word occurs in a text, and expresses the result as a percentage.
 
+```
+def percent(word, text):
+    print(100 * text.count(word) / len(text))
+
+percent('it',text1)
+0.8469474999904149
+
+```
+
+29. ◑ We have been using sets to store vocabularies. Try the following Python expression: set(sent3) < set(text1). Experiment with this using different arguments to set(). What does it do? Can you think of a practical application for this?
