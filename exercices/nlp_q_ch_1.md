@@ -524,3 +524,46 @@ Out[922]:
 
 
 ```
+
+23. ◑ Review the discussion of looping with conditions in 4. Use a combination of for and if statements to loop over the words of the movie script for Monty Python and the Holy Grail (text6) and print all the uppercase words, one per line.
+
+```
+sorted(set(w for w in (text6) if w.isupper()))
+Out[930]: 
+['A',
+ 'ALL',
+ 'AMAZING',
+ 'ANIMATOR',
+ 'ARMY',
+ 'ARTHUR',
+ 'B',
+ 'BEDEVERE',
+ 'BLACK',
+ 'BORS',
+ 'BRIDE',
+ 'BRIDGEKEEPER',
+ 'BROTHER',
+ 'C',
+ 'CAMERAMAN',
+ 'CART',
+ 'CARTOON',
+ 'CHARACTER',
+ 'CHARACTERS',
+ 'CONCORDE',
+ 'CRAPPER',
+ 'CRASH',
+ 'CRONE',
+ 'CROWD',
+ 'CUSTOMER',
+ 'DEAD',
+ 'DENNIS',
+ 'DINGO',
+ 'DIRECTOR',
+ 'ENCHANTER',
+ 'FATHER',
+ 'FRENCH',
+ 'GALAHAD',
+ 'GIRLS',
+ [...]
+
+```
