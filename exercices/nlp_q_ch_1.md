@@ -567,3 +567,88 @@ Out[930]:
  [...]
 
 ```
+
+24. ◑ Write expressions for finding all words in text6 that meet the conditions listed below. The result should be in the form of a list of words: ['word1', 'word2', ...].
+
+ a. Ending in ize
+ I did not get any hits
+ ```
+ sorted(w for w in text6 if w.endswith('ize'))
+Out[17]: []
+
+
+ ```
+ 
+ b. Containing the letter z
+ 
+ ```
+ sorted(w for w in text6 if 'z' in w)
+Out[18]: 
+['Fetchez',
+ 'Fetchez',
+ 'amazes',
+ 'frozen',
+ 'zhiv',
+ 'zone',
+ 'zoo',
+ 'zoop',
+ 'zoosh']
+ 
+ ```
+ 
+ c. Containing the sequence of letters pt
+
+```
+sorted(w for w in text6 if 'pt' in w)
+Out[19]: 
+['Chapter',
+ 'Thpppppt',
+ 'Thppppt',
+ 'Thpppt',
+ 'Thppt',
+ 'Thppt',
+ 'aptly',
+ 'empty',
+ 'empty',
+ 'excepting',
+ 'ptoo',
+ 'temptation',
+ 'temptress']
+ 
+ ```
+ d. Having all lowercase letters except for an initial capital (i.e., titlecase)
+ 
+ ```
+sorted(set(w for w in text6 if w.istitle()))
+Out[22]: 
+['A',
+ 'Aaaaaaaaah',
+ 'Aaaaaaaah',
+ 'Aaaaaah',
+ 'Aaaah',
+ 'Aaaaugh',
+ 'Aaagh',
+ 'Aaah',
+ 'Aaauggh',
+ 'Aaaugh',
+ 'Aaauugh',
+ 'Aagh',
+ 'Aah',
+ 'Aauuggghhh',
+ 'Aauuugh',
+ 'Aauuuuugh',
+ 'Aauuuves',
+ 'Action',
+ 'Actually',
+ 'African',
+ 'Ages',
+ 'Aggh',
+ 'Agh',
+ 'Ah',
+ 'Ahh',
+ 'Alice',
+ 'All',
+ 'Allo',
+[...]
+ 
+ ```
