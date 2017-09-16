@@ -492,3 +492,35 @@ text2[-2:]
 Out[901]: ['THE', 'END']
 
 ```
+
+22. ◑ Find all the four-letter words in the Chat Corpus (text5). With the help of a frequency distribution (FreqDist), show these words in decreasing order of frequency.
+
+```
+fdist1 = FreqDist(sorted(w for w in (text1) if len(w) == 4 and w.isalpha()))
+
+#If I leave the emty it will return the hole list
+fdist1.most_common(20)
+Out[922]: 
+[('that', 2982),
+ ('with', 1659),
+ ('this', 1280),
+ ('from', 1052),
+ ('have', 760),
+ ('were', 680),
+ ('like', 624),
+ ('they', 586),
+ ('some', 578),
+ ('then', 571),
+ ('when', 553),
+ ('upon', 538),
+ ('into', 520),
+ ('ship', 507),
+ ('more', 501),
+ ('Ahab', 501),
+ ('them', 471),
+ ('what', 442),
+ ('been', 415),
+ ('over', 403)]
+
+
+```
