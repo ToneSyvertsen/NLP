@@ -274,3 +274,109 @@ For some reason this don't work in spyder..
 [20, 18, 16, 14, 12]
 
 ```
+
+17.◑ Use text9.index() to find the index of the word sunset. You'll need to insert this word as an argument between the parentheses. By a process of trial and error, find the slice for the complete sentence that contains this word.
+
+```
+text9.index('sunset')
+Out[860]: 629
+
+```
+```
+***Trying to find the sentens***
+text9[600:640]
+Out[861]: 
+[',',
+ 'and',
+ 'you',
+ 'may',
+ 'safely',
+ 'read',
+ '.',
+ 'G',
+ '.',
+ 'K',
+ '.',
+ 'C',
+ '.',
+ 'CHAPTER',
+ 'I',
+ 'THE',
+ 'TWO',
+ 'POETS',
+ 'OF',
+ 'SAFFRON',
+ 'PARK',
+ 'THE',
+ 'suburb',
+ 'of',
+ 'Saffron',
+ 'Park',
+ 'lay',
+ 'on',
+ 'the',
+ 'sunset',
+ 'side',
+ 'of',
+ 'London',
+ ',',
+ 'as',
+ 'red',
+ 'and',
+ 'ragged',
+ 'as',
+ 'a']
+
+text9[622:645]
+Out[862]: 
+['suburb',
+ 'of',
+ 'Saffron',
+ 'Park',
+ 'lay',
+ 'on',
+ 'the',
+ 'sunset',
+ 'side',
+ 'of',
+ 'London',
+ ',',
+ 'as',
+ 'red',
+ 'and',
+ 'ragged',
+ 'as',
+ 'a',
+ 'cloud',
+ 'of',
+ 'sunset',
+ '.',
+ 'It']
+ 
+text9[621:644]
+Out[863]: 
+['THE',
+ 'suburb',
+ 'of',
+ 'Saffron',
+ 'Park',
+ 'lay',
+ 'on',
+ 'the',
+ 'sunset',
+ 'side',
+ 'of',
+ 'London',
+ ',',
+ 'as',
+ 'red',
+ 'and',
+ 'ragged',
+ 'as',
+ 'a',
+ 'cloud',
+ 'of',
+ 'sunset',
+ '.']
+ 
+ ```
