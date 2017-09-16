@@ -485,3 +485,10 @@ Out[898]: ['C', 'E', 'I', 'S', 'T']
 
 ```
 
+21. ◑ Write the slice expression that extracts the last two words of text2.
+
+```
+text2[-2:]
+Out[901]: ['THE', 'END']
+
+```
