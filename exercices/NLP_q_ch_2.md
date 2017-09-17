@@ -1,5 +1,46 @@
 1. ☼ Create a variable phrase containing a list of words. Review the operations described in the previous chapter, including addition, multiplication, indexing, slicing, and sorting.
 
+``` 
+list= ['This', 'is', 'my', 'life', '!']
+
+list + list
+Out[86]: ['This', 'is', 'my', 'life', '!', 'This', 'is', 'my', 'life', '!']
+
+list * 3
+Out[87]: 
+['This',
+ 'is',
+ 'my',
+ 'life',
+ '!',
+ 'This',
+ 'is',
+ 'my',
+ 'life',
+ '!',
+ 'This',
+ 'is',
+ 'my',
+ 'life',
+ '!']
+ 
+list[:2]
+Out[89]: ['This', 'is']
+
+list[:-2]
+Out[90]: ['This', 'is', 'my']
+
+list[-2:]
+Out[91]: ['life', '!']
+
+list[2:4]
+Out[92]: ['my', 'life']
+
+sorted(list)
+Out[94]: ['!', 'This', 'is', 'life', 'my']
+
+```
+
 2. ☼ Use the corpus module to explore austen-persuasion.txt. How many word tokens does this book have? How many word types?
 
 3. ☼ Use the Brown corpus reader nltk.corpus.brown.words() or the Web text corpus reader nltk.corpus.webtext.words() to access some sample text in two different genres.
