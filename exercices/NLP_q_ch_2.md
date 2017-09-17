@@ -191,11 +191,11 @@ cfd.plot()
 
 Today it dosen't work(neither does the example in the book, but did work last time.
 
-Today:
+
 ![somethings wrong...](https://puu.sh/xCd7f/428b554610.png)
 
 
-Last Time: 
+
 ![CCounting occurrences of men, women, and people](https://puu.sh/xCd4p/60a3720464.png)
 
 
