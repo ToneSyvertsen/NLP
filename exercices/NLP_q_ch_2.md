@@ -107,6 +107,95 @@ Out[119]:
 
 4. ☼ Read in the texts of the State of the Union addresses, using the state_union corpus reader. Count occurrences of men, women, and people in each document. What has happened to the usage of these words over time?
 
+```
+from nltk.corpus import state_union
+
+state_union.fileids()
+Out[123]: 
+['1945-Truman.txt',
+ '1946-Truman.txt',
+ '1947-Truman.txt',
+ '1948-Truman.txt',
+ '1949-Truman.txt',
+ '1950-Truman.txt',
+ '1951-Truman.txt',
+ '1953-Eisenhower.txt',
+ '1954-Eisenhower.txt',
+ '1955-Eisenhower.txt',
+ '1956-Eisenhower.txt',
+ '1957-Eisenhower.txt',
+ '1958-Eisenhower.txt',
+ '1959-Eisenhower.txt',
+ '1960-Eisenhower.txt',
+ '1961-Kennedy.txt',
+ '1962-Kennedy.txt',
+ '1963-Johnson.txt',
+ '1963-Kennedy.txt',
+ '1964-Johnson.txt',
+ '1965-Johnson-1.txt',
+ '1965-Johnson-2.txt',
+ '1966-Johnson.txt',
+ '1967-Johnson.txt',
+ '1968-Johnson.txt',
+ '1969-Johnson.txt',
+ '1970-Nixon.txt',
+ '1971-Nixon.txt',
+ '1972-Nixon.txt',
+ '1973-Nixon.txt',
+ '1974-Nixon.txt',
+ '1975-Ford.txt',
+ '1976-Ford.txt',
+ '1977-Ford.txt',
+ '1978-Carter.txt',
+ '1979-Carter.txt',
+ '1980-Carter.txt',
+ '1981-Reagan.txt',
+ '1982-Reagan.txt',
+ '1983-Reagan.txt',
+ '1984-Reagan.txt',
+ '1985-Reagan.txt',
+ '1986-Reagan.txt',
+ '1987-Reagan.txt',
+ '1988-Reagan.txt',
+ '1989-Bush.txt',
+ '1990-Bush.txt',
+ '1991-Bush-1.txt',
+ '1991-Bush-2.txt',
+ '1992-Bush.txt',
+ '1993-Clinton.txt',
+ '1994-Clinton.txt',
+ '1995-Clinton.txt',
+ '1996-Clinton.txt',
+ '1997-Clinton.txt',
+ '1998-Clinton.txt',
+ '1999-Clinton.txt',
+ '2000-Clinton.txt',
+ '2001-GWBush-1.txt',
+ '2001-GWBush-2.txt',
+ '2002-GWBush.txt',
+ '2003-GWBush.txt',
+ '2004-GWBush.txt',
+ '2005-GWBush.txt',
+ '2006-GWBush.txt']
+
+#Counting occurrences of men, women, and people
+cfd = nltk.ConditionalFreqDist(
+        (target, fileid[:4])
+        for fileid in state_union.fileids()
+        for w in state_union.words(fileid)
+        for target in ['men', 'women', 'people']
+        if w.lower().startswith(target)) [1]
+
+cfd.plot()
+``` 
+
+Today it dosen't work(neither does the example in the book, but did work last time.
+
+Today:
+![somethings wrong...](https://puu.sh/xCd7f/428b554610.png)
+Last Time: 
+![CCounting occurrences of men, women, and people](https://puu.sh/xCd4p/60a3720464.png)
+
 5. ☼ Investigate the holonym-meronym relations for some nouns. Remember that there are three kinds of holonym-meronym relation, so you need to use: member_meronyms(), part_meronyms(),  substance_meronyms(), member_holonyms(), part_holonyms(), and substance_holonyms().
 
 6. ☼ In the discussion of comparative wordlists, we created an object called translate which you could look up using words in both German and Spanish in order to get corresponding words in English. What problem might arise with this approach? Can you suggest a way to avoid this problem?
