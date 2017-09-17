@@ -198,6 +198,8 @@ Today it dosen't work(neither does the example in the book, but did work last ti
 
 ![CCounting occurrences of men, women, and people](https://puu.sh/xCd4p/60a3720464.png)
 
+People are the prefered word to use, first half of the period you can see there was some use of men too.
+
 
 5. ☼ Investigate the holonym-meronym relations for some nouns. Remember that there are three kinds of holonym-meronym relation, so you need to use: member_meronyms(), part_meronyms(),  substance_meronyms(), member_holonyms(), part_holonyms(), and substance_holonyms().
 
