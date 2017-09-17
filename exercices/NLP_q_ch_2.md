@@ -43,6 +43,19 @@ Out[94]: ['!', 'This', 'is', 'life', 'my']
 
 2. ☼ Use the corpus module to explore austen-persuasion.txt. How many word tokens does this book have? How many word types?
 
+```
+len(gutenberg.raw('austen-persuasion.txt'))
+Out[96]: 466292
+
+#not sure what they want to know here distinct words?
+
+len(set(gutenberg.words('austen-persuasion.txt')))
+Out[108]: 6132
+
+#or classes of words? I do belive that's in chapter 5..
+
+```
+
 3. ☼ Use the Brown corpus reader nltk.corpus.brown.words() or the Web text corpus reader nltk.corpus.webtext.words() to access some sample text in two different genres.
 
 4. ☼ Read in the texts of the State of the Union addresses, using the state_union corpus reader. Count occurrences of men, women, and people in each document. What has happened to the usage of these words over time?
