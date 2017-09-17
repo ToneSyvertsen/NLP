@@ -58,6 +58,53 @@ Out[108]: 6132
 
 3. ☼ Use the Brown corpus reader nltk.corpus.brown.words() or the Web text corpus reader nltk.corpus.webtext.words() to access some sample text in two different genres.
 
+```
+
+from nltk.corpus import brown
+
+print(brown.categories())
+['adventure', 'belles_lettres', 'editorial', 'fiction', 'government', 'hobbies', 'humor', 'learned', 'lore', 'mystery', 'news', 'religion', 'reviews', 'romance', 'science_fiction']
+
+mystery=brown.words(categories='mystery')
+
+learned=brown.words(categories='learned')
+
+#I don't know if I was suppose to take out some text? But well then I know I can access it
+
+mystery[4:20]
+Out[118]: 
+['on',
+ 'the',
+ 'bus',
+ 'the',
+ 'morning',
+ 'I',
+ 'left',
+ 'for',
+ 'Hanover',
+ ',',
+ 'most',
+ 'of',
+ 'them',
+ 'disturbed',
+ 'and',
+ 'hallucinating']
+
+learned[0:10]
+Out[119]: 
+['1',
+ '.',
+ 'Introduction',
+ 'It',
+ 'has',
+ 'recently',
+ 'become',
+ 'practical',
+ 'to',
+ 'use']
+
+```
+
 4. ☼ Read in the texts of the State of the Union addresses, using the state_union corpus reader. Count occurrences of men, women, and people in each document. What has happened to the usage of these words over time?
 
 5. ☼ Investigate the holonym-meronym relations for some nouns. Remember that there are three kinds of holonym-meronym relation, so you need to use: member_meronyms(), part_meronyms(),  substance_meronyms(), member_holonyms(), part_holonyms(), and substance_holonyms().
