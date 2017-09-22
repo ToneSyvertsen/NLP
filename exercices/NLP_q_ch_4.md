@@ -65,9 +65,109 @@ class tuple(object)
 
 2. ☼ Identify three operations that can be performed on both tuples and lists. Identify three list operations that cannot be performed on tuples. Name a context where using a list instead of a tuple generates a Python error.
 
+This functions works on both lists and tuples (and strings, eksept then it will return tokens not words)
+
+```
+list = ['I', 'turned', 'off', 'the', 'spectroroute']
+tuple = (6, 'turned')
+list[3], tuple[1]
+Out[225]: ('the', 'turned')
+
+list[-3:], tuple[-3:]
+Out[226]: (['off', 'the', 'spectroroute'], (6, 'turned'))
+
+len(list), len(tuple)
+Out[227]: (5, 2)
+
+```
+
+ This works on list, but not on tuples:
+ 
+```
+tuples.sort()
+tuples[1] = ('turned', 'VBD', ['t3:nd', 't3`nd'])
+del tuples[0]
+
+```
+
+This is because tuples are imutable, lists are not.
+
+
 3. ☼ Find out how to create a tuple consisting of a single item. There are at least two ways to do this.
 
+I only found one way to do this..
+
+```
+text= ('snark',)
+
+type(text)
+Out[244]: tuple
+
+```
+I tried 
+
+```
+text2 = ['handle', ' ']
+type(text2)
+Out[254]: list
+
+text2 = tuple(text2)
+Traceback (most recent call last):
+
+  File "<ipython-input-255-c3cbc0cc30b6>", line 1, in <module>
+    text2 = tuple(text2)
+
+TypeError: 'tuple' object is not callable
+
+```
+
 4. ☼ Create a list words = ['is', 'NLP', 'fun', '?']. Use a series of assignment statements (e.g. words[1] = words[2]) and a temporary variable tmp to transform this list into the list  ['NLP', 'is', 'fun', '!']. Now do the same transformation using tuple assignment.
+
+With list:
+
+```
+words = ['is', 'NLP', 'fun', '?']
+
+words[0], words[1] = words[1], words[0]
+
+words[3] = '!'
+
+print (words)
+['NLP', 'is', 'fun', '!']
+
+words = ['is', 'NLP', 'fun', '?']
+tmp = words[0]
+words[0] = words[1]
+words[1] = tmp
+words[3] = '!'
+print (words)
+['NLP', 'is', 'fun', '!']
+
+```
+ass expected since tuples are immutable this did not work:
+
+```
+words = ('is', 'NLP', 'fun', '?')
+
+type(words)
+Out[279]: tuple
+
+words[0], words[1] = words[1], words[0]
+
+words[3] = '!'
+
+print (words)
+
+Traceback (most recent call last):
+
+  File "<ipython-input-280-d485795ae33a>", line 1, in <module>
+    words[0], words[1] = words[1], words[0]
+
+TypeError: 'tuple' object does not support item assignment
+
+
+```
+
 
 5. ☼ Read about the built-in comparison function cmp, by typing help(cmp). How does it differ in behavior from the comparison operators?
 
