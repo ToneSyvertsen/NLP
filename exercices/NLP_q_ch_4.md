@@ -1,5 +1,68 @@
 1. ☼ Find out more about sequence objects using Python's help facility. In the interpreter, type help(str), help(list), and help(tuple). This will give you a full list of the functions supported by each type. Some functions have special names flanked with underscore; as the help documentation shows, each such function corresponds to something more familiar. For example  x.__getitem__(y) is just a long-winded way of saying x[y].
 
+```
+
+help(str)
+Help on class str in module builtins:
+
+class str(object)
+ |  str(object='') -> str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -> str
+ |  
+ |  Create a new string object from the given object. If encoding or
+ |  errors is specified, then the object must expose a data buffer
+ |  that will be decoded using the given encoding and error handler.
+ |  Otherwise, returns the result of object.__str__() (if defined)
+ |  or repr(object).
+ |  encoding defaults to sys.getdefaultencoding().
+ |  errors defaults to 'strict'.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  [...]
+
+
+help(list)
+Help on class list in module builtins:
+
+class list(object)
+ |  list() -> new empty list
+ |  list(iterable) -> new list initialized from iterable's items
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+[...]
+
+help(tuple)
+Help on class tuple in module builtins:
+
+class tuple(object)
+ |  tuple() -> empty tuple
+ |  tuple(iterable) -> tuple initialized from iterable's items
+ |  
+ |  If the argument is a tuple, the return value is the same object.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ [...]
+ 
+```
+
 2. ☼ Identify three operations that can be performed on both tuples and lists. Identify three list operations that cannot be performed on tuples. Name a context where using a list instead of a tuple generates a Python error.
 
 3. ☼ Find out how to create a tuple consisting of a single item. There are at least two ways to do this.
