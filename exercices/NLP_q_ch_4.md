@@ -90,7 +90,7 @@ del tuples[0]
 
 ```
 
-This is because tuples are imutable, lists are not.
+This is because tuples are immutable, lists are not.
 
 
 3. ☼ Find out how to create a tuple consisting of a single item. There are at least two ways to do this.
