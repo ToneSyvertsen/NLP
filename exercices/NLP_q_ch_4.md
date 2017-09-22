@@ -144,7 +144,7 @@ print (words)
 ['NLP', 'is', 'fun', '!']
 
 ```
-ass expected since tuples are immutable this did not work:
+As expected since tuples are immutable this did not work:
 
 ```
 words = ('is', 'NLP', 'fun', '?')
