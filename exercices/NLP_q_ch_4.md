@@ -236,7 +236,42 @@ elif 'fish' in sent:
 
 8. ☼ Use the inequality operators to compare strings, e.g. 'Monty' < 'Python'. What happens when you do 'Z' < 'a'? Try pairs of strings which have a common prefix, e.g.  'Monty' < 'Montague'. Read up on "lexicographical sort" in order to understand what is going on here. Try comparing structured objects, e.g. ('Monty', 1) < ('Monty', 2). Does this behave as expected?
 
+
+It sort alphabeticaly, and don't care about capital letters
+
 ``` 
+'Monty' < 'Python'
+Out[35]: True
+
+'Z' < 'a'
+Out[36]: True
+
+'z' < 'A'
+Out[46]: False
+
+'A' < 'z'
+Out[47]: True
+
+'Monty' < 'Montague'
+Out[37]: False
+
+('Monty', 1) < ('Monty', 2)
+Out[38]: True 
+
+('Monty', 2) < ('Monty', 1)
+Out[45]: False
+
+'abc' < 'ab'
+Out[39]: False
+
+'ab' < 'abc'
+Out[40]: True
+
+'dog' < 'underdog'
+Out[41]: True
+
+'dog' > 'underdog'
+Out[42]: False
 
 ``` 
 
