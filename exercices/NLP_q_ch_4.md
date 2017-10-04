@@ -171,11 +171,74 @@ TypeError: 'tuple' object does not support item assignment
 
 5. ☼ Read about the built-in comparison function cmp, by typing help(cmp). How does it differ in behavior from the comparison operators?
 
+```
+
+help(cmp)
+Traceback (most recent call last):
+
+  File "<ipython-input-9-a687b1e1e9d3>", line 1, in <module>
+    help(cmp)
+
+NameError: name 'cmp' is not defined
+
+```
+
+found this: "As mentioned in the comments, cmp doesn't exist in Python 3" (https://stackoverflow.com/questions/22490366/cmp-isnt-woking-for-me-python?answertab=active#tab-top)
+
 6. ☼ Does the method for creating a sliding window of n-grams behave correctly for the two limiting cases: n = 1, and n = len(sent)?
+
+Sorry, don't understand the question..
+
+```
+sent = ['The', 'dog', 'gave', 'John', 'the', 'newspaper']
+
+n = 3
+
+[sent[i:i+n] for i in range(len(sent)-n+1)]
+Out[23]: 
+[['The', 'dog', 'gave'],
+ ['dog', 'gave', 'John'],
+ ['gave', 'John', 'the'],
+ ['John', 'the', 'newspaper']]
+
+n = 1
+
+[sent[i:i+n] for i in range(len(sent)-n+1)]
+Out[25]: [['The'], ['dog'], ['gave'], ['John'], ['the'], ['newspaper']]
+
+n = len(sent)
+
+[sent[i:i+n] for i in range(len(sent)-n+1)]
+Out[27]: [['The', 'dog', 'gave', 'John', 'the', 'newspaper']]
+
+``` 
 
 7. ☼ We pointed out that when empty strings and empty lists occur in the condition part of an if clause, they evaluate to False. In this case, they are said to be occurring in a Boolean context. Experiment with different kind of non-Boolean expressions in Boolean contexts, and see whether they evaluate as True or False.
 
+Don't know what i'm suppose to do here :P
+
+```
+sent = ['No', 'good', 'fish', 'goes', 'anywhere', 'without', 'a', 'porpoise', '.']
+
+all(len(w) > 4 for w in sent)
+Out[29]: False
+
+any(len(w) > 4 for w in sent)
+Out[30]: True
+
+if 'Yes' in sent:
+     print(1)
+elif 'fish' in sent:
+     print(2)
+2
+
+```
+
 8. ☼ Use the inequality operators to compare strings, e.g. 'Monty' < 'Python'. What happens when you do 'Z' < 'a'? Try pairs of strings which have a common prefix, e.g.  'Monty' < 'Montague'. Read up on "lexicographical sort" in order to understand what is going on here. Try comparing structured objects, e.g. ('Monty', 1) < ('Monty', 2). Does this behave as expected?
+
+``` 
+
+``` 
 
 9. ☼ Write code that removes whitespace at the beginning and end of a string, and normalizes whitespace between words to be a single space character.
 
